@@ -1,0 +1,19 @@
+call pathogen#infect()
+
+colorscheme solarized
+if has('gui_running')
+  set background=dark
+else
+  set background=dark
+endif
+
+set smartindent
+set autoindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set cinkeys=0{,0},:,0#,!,!^F
+
+:autocmd BufEnter * Rvm
+
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
