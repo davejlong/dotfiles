@@ -2,6 +2,13 @@ call pathogen#infect()
 
 syntax on
 
+set nocompatible
+
+" Line Numbering
+set number
+set ruler
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 colorscheme solarized
 if has('gui_running')
   set background=dark
@@ -9,15 +16,20 @@ else
   set background=dark
 endif
 
+set nowrap
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Indentation
 set smartindent
 set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!,!^F
-
-" Line Numbering
-set number
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>

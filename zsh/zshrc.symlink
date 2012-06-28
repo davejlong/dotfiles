@@ -20,3 +20,28 @@ compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
+
+alias ll="ls -lahG"
+
+proxy() { ssh -NCD 2001 davejlong@davidlong.dyndns.org; }
+
+fliptable() { echo "（╯°□°）╯︵ ┻━┻"; } # Flip a table
+flipcoin() { [[ $(( $RANDOM % 2 )) == 0 ]] && echo heads || echo tails; } # Flip a coin function.
+mcd() { [[ -n "$1" ]] && mkdir -p "$1" && cd "$1"; } # mkdir and cd in one step
+
+herokutest() {
+  set -e
+  git ci . -m 'Heroku temporary commit'
+  git push heroku master --force
+
+  echo
+  echo "Press Enter once you have tested the app on Heroku"
+  read
+
+  git reset --soft HEAD~1
+  git push heroku master --force
+
+  echo
+  echo "Okay, the app is restored to where it was before"
+  echo
+}
