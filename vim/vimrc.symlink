@@ -16,4 +16,8 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!,!^F
 
+" Line Numbering
+set number
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
