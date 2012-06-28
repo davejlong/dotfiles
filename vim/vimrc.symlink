@@ -1,5 +1,7 @@
 call pathogen#infect()
 
+syntax on
+
 colorscheme solarized
 if has('gui_running')
   set background=dark
