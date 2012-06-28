@@ -1,0 +1,2 @@
+fliptable() { echo "（╯°□°）╯︵ ┻━┻"; } # Flip a table
+flipcoin() { [[ $(( $RANDOM % 2 )) == 0 ]] && echo heads || echo tails; } # Flip a coin function.
