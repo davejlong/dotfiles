@@ -1,0 +1,30 @@
+[submodule "vim/vim.symlink/bundle/fugitive"]
+	path = vim/vim.symlink/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/bundle/solarized"]
+	path = vim/vim.symlink/bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/vim.symlink/bundle/handlebars"]
+	path = vim/vim.symlink/bundle/handlebars
+	url = https://github.com/nono/vim-handlebars.git
+[submodule "vim/vim.symlink/bundle/jade"]
+	path = vim/vim.symlink/bundle/jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim/vim.symlink/bundle/less"]
+	path = vim/vim.symlink/bundle/less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "vim/vim.symlink/bundle/liquid"]
+	path = vim/vim.symlink/bundle/liquid
+	url = https://github.com/tpope/vim-liquid.git
+[submodule "vim/vim.symlink/bundle/ruby"]
+	path = vim/vim.symlink/bundle/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/vim.symlink/bundle/nerdtree"]
+	path = vim/vim.symlink/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim.symlink/bundle/rails"]
+	path = vim/vim.symlink/bundle/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/vim.symlink/bundle/rake"]
+	path = vim/vim.symlink/bundle/rake
+	url = https://github.com/tpope/vim-rake.git

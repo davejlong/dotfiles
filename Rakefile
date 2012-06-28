@@ -25,11 +25,13 @@ task :install do
         when 's' then next
         end
       end
-      FileUtils.rm_rc(target) if overwrite || overwrite_all
+      FileUtils.rm_rf(target) if overwrite || overwrite_all
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+
+  Rake::Task['update'].invoke
 end
 
 task :uninstall do
@@ -49,4 +51,15 @@ task :uninstall do
   end
 end
 
+task :update do
+  `git submodule init`
+  `git submodule update`
+  #Rake::Task['pullInCustom'].invoke
+end
+
+task :pullInCustom do
+  # Pull in CF-Utils.vim
+  `FileUtils.rm_rf("#{ENV['HOME']}/.vim/bundle/cf-utils` if File.exists?("#{ENV['HOME']}/.vim/bundle/cf-utils");
+  `cd vim/vim.symlink/bundle && git clone https://github.com/davejlong/cf-utils.vim.git cf-utils`
+end
 task :default => 'install'
