@@ -31,3 +31,6 @@
 [submodule "vim/vim.symlink/bundle/cf-utils"]
 	path = vim/vim.symlink/bundle/cf-utils
 	url = https://github.com/davejlong/cf-utils.vim.git
+[submodule "vim/vim.symlink/bundle/coffeescript"]
+	path = vim/vim.symlink/bundle/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
