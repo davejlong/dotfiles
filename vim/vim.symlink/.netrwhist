@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/davejlong/Workspace/dotfiles/vim/vim.symlink/bundle'
-let g:netrw_dirhist_2='/Users/davejlong/Workspace/recruitics/legacy/new_oadmin'
-let g:netrw_dirhist_3='/Users/davejlong/.dotfiles/zsh'
-let g:netrw_dirhist_4='/home/davejlong/Workspace/coh-db'
-let g:netrw_dirhist_5='/home/davejlong/.dotfiles/bin'
-let g:netrw_dirhist_6='/home/davejlong/Workspace/davejlong.github.com'
-let g:netrw_dirhist_7='/home/davejlong/.dotfiles/vim/vim.symlink/bundle/cf-utils'
