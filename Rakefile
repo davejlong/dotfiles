@@ -54,12 +54,6 @@ end
 task :update do
   `git submodule init`
   `git submodule update`
-  #Rake::Task['pullInCustom'].invoke
 end
 
-task :pullInCustom do
-  # Pull in CF-Utils.vim
-  `FileUtils.rm_rf("#{ENV['HOME']}/.vim/bundle/cf-utils` if File.exists?("#{ENV['HOME']}/.vim/bundle/cf-utils");
-  `cd vim/vim.symlink/bundle && git clone https://github.com/davejlong/cf-utils.vim.git cf-utils`
-end
 task :default => 'install'
