@@ -1,6 +1,14 @@
+# General stuff
 .DS_Store
 .svn
 .tissues
 *~
-*.swp
 *.rbc
+
+# Eclipse / CF Builder
+.settings
+.project
+settings.xml
+
+# Vim
+*.swp
