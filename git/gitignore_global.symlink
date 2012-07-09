@@ -4,6 +4,10 @@
 .tissues
 *~
 *.rbc
+tmp
+log
+*.log
+*.sqlite3
 
 # Eclipse / CF Builder
 .settings

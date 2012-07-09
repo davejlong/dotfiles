@@ -1,3 +1,3 @@
 alias reload!='. ~/.zshrc'
 
-alias ll='ls -lahG --color'
+alias ll='ls -lahGA'
