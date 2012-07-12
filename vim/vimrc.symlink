@@ -58,7 +58,7 @@ au FocusLost * :wa
 
 " Status line customization
 :set laststatus=2
-:set statusline=Line:%l/%L[%p%%]\ \|\ Col:%v\ \|\ Buf:#%n\ \|
+:set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
 :set statusline+=%=%{fugitive#statusline()}
 
 " Leader Customizations
