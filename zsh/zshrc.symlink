@@ -24,5 +24,6 @@ for config_file ($ZSH/**/completion.sh) source $config_file
 proxy() { ssh -NCD 2001 davejlong@davidlong.dyndns.org; }
 mcd() { [[ -n "$1" ]] && mkdir -p "$1" && cd "$1"; } # mkdir and cd in one step
 
+# Check for updates so that I never have to worry
 (cd ".dotfiles" && git pull && git submodule update)
 cd ~/
