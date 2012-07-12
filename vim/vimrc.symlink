@@ -15,15 +15,28 @@ if has('gui_running')
 else
   set background=dark
 endif
-call togglebg#map("<F5>")
+call togglebg#map("<tab>")
 
 set nowrap
 
+" File Editing
+set relativenumber
+set undofile
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " Searching
+nnoremap / /\v
+vnoremap / /\v
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set gdefault
+set showmatch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
 
 " Indentation
 set smartindent
@@ -38,3 +51,15 @@ nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 " NERDTree Config
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Save file on blur
+au FocusLost * :wa
+
+" Leader Customizations
+let mapleader = ","
+  " Strip all trailing whitespace in a file (,W)
+  nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+  " Reselect text that was just pasted (,v)
+  nnoremap <leader>v V`]
+  " Open .vimrc in vsplit (,ev)
+  nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
