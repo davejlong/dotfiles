@@ -9,13 +9,15 @@ set number
 set ruler
 " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
+let mapleader = ","
+
 colorscheme solarized
 if has('gui_running')
   set background=light
 else
   set background=dark
 endif
-call togglebg#map("<tab>")
+call togglebg#map("<F5>")
 
 set nowrap
 
@@ -34,9 +36,8 @@ set ignorecase
 set smartcase
 set gdefault
 set showmatch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+nnoremap <Tab> %
+vnoremap <Tab> %
 
 " Indentation
 set smartindent
@@ -56,10 +57,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 au FocusLost * :wa
 
 " Leader Customizations
-let mapleader = ","
   " Strip all trailing whitespace in a file (,W)
   nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
   " Reselect text that was just pasted (,v)
   nnoremap <leader>v V`]
   " Open .vimrc in vsplit (,ev)
   nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+  " Clear search
+  nnoremap <leader><space> :noh<cr>
