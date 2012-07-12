@@ -12,11 +12,11 @@ set ruler
 let mapleader = ","
 
 colorscheme solarized
-if has('gui_running')
-  set background=light
-else
+" if has('gui_running')
+"   set background=light
+" else
   set background=dark
-endif
+" endif
 call togglebg#map("<F5>")
 
 set nowrap
@@ -55,6 +55,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Save file on blur
 au FocusLost * :wa
+
+" Status line customization
+:set laststatus=2
+:set statusline=Line:%l/%L[%p%%]\ \|\ Col:%v\ \|\ Buf:#%n\ \|
+:set statusline+=%=%{fugitive#statusline()}
 
 " Leader Customizations
   " Strip all trailing whitespace in a file (,W)
