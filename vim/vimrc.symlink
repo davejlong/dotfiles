@@ -47,7 +47,8 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!,!^F
 
-nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+" Something to do with Less
+nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 " NERDTree Config
 autocmd vimenter * if !argc() | NERDTree | endif
