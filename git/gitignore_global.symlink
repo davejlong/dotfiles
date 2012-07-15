@@ -16,7 +16,12 @@ settings.xml
 
 # Vim
 *.swp
+*.un~
 
 # Vagrant
 .vagrant
 Vagrantfile
+
+# ColdFusion
+CFIDE
+WEB-INF

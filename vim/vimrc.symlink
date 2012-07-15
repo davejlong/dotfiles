@@ -1,13 +1,7 @@
 call pathogen#infect()
 
 syntax on
-
 set nocompatible
-
-" Line Numbering
-set number
-set ruler
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 let mapleader = ","
 
@@ -19,6 +13,12 @@ colorscheme solarized
 " endif
 call togglebg#map("<F5>")
 
+" Line Numbering
+set number
+set ruler
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" Line wrapping
 set nowrap
 
 " File Editing
