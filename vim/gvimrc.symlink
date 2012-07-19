@@ -1,2 +1,2 @@
-set guifont=Inconsolata\ 12
+set guifont=Inconsolata\ 11
 call togglebg#map("<F5>")
