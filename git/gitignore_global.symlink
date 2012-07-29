@@ -17,6 +17,7 @@ settings.xml
 # Vim
 *.swp
 *.un~
+*.swo
 
 # Vagrant
 .vagrant

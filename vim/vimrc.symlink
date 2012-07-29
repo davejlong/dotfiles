@@ -47,6 +47,11 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!,!^F
 
+" Line Wrapping
+set wrap
+set linebreak
+set nolist " List disables linebreak
+
 " Something to do with Less
 nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
 

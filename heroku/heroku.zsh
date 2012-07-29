@@ -1,6 +1,6 @@
 herokutest() {
   set -e
-  git ci . -m 'Heroku temporary commit'
+  git commit . -am 'Heroku temporary commit'
   git push heroku master --force
 
   echo
