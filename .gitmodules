@@ -43,3 +43,12 @@
 [submodule "vim/vim.symlink/bundle/zencoding"]
 	path = vim/vim.symlink/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "vim/vim.symlink/bundle/unimpaired"]
+	path = vim/vim.symlink/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/vim.symlink/bundle/endwise"]
+	path = vim/vim.symlink/bundle/endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "vim/vim.symlink/bundle/surroud"]
+	path = vim/vim.symlink/bundle/surroud
+	url = https://github.com/tpope/vim-surround.git
