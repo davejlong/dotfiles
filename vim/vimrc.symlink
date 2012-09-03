@@ -5,8 +5,8 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme solarized
-set background=dark
+colorscheme Tomorrow-Night-Eighties
+"set background=dark
 call togglebg#map("<F5>")
 
 " Line Numbering
