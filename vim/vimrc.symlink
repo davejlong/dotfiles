@@ -5,12 +5,8 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme solarized
-" if has('gui_running')
-"   set background=light
-" else
-  set background=dark
-" endif
+colorscheme Tomorrow-Night-Eighties
+"set background=dark
 call togglebg#map("<F5>")
 
 " Line Numbering
@@ -76,3 +72,5 @@ au FocusLost * :wa
   nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
   " Clear search
   nnoremap <leader><space> :noh<cr>
+
+  nnoremap HH :silent ! mpg123 ~/.vim/horns.mp3 1>&-2>&-&<CR><C-l>
