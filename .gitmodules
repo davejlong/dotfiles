@@ -54,4 +54,4 @@
 	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/vim.symlink/bundle/arduino"]
 	path = vim/vim.symlink/bundle/arduino
-	url = https://github.com/kingbin/vim-arduino.git
+	url = https://github.com/davejlong/vim-arduino.git
