@@ -5,7 +5,7 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow
 "set background=dark
 call togglebg#map("<F5>")
 
@@ -73,4 +73,4 @@ au FocusLost * :wa
   " Clear search
   nnoremap <leader><space> :noh<cr>
 
-  nnoremap HH :silent ! mpg123 ~/.vim/horns.mp3 1>&-2>&-&<CR><C-l>
+  nnoremap HH :silent !afplay ~/.vim/VicotryFanfare.mp3 <CR><C-l>
