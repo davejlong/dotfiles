@@ -1,2 +1,9 @@
-set guifont=Inconsolata:h16
+if has("gui_gtk2")
+  " Ubuntu
+  set guifont=Inconsolata\ 12
+elseif has("gui_win32")
+  " Windows
+  set guifont=Inconsolata:h11
+endif
+
 call togglebg#map("<F5>")

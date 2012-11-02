@@ -5,7 +5,7 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 "set background=dark
 call togglebg#map("<F5>")
 
