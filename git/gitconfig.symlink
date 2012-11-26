@@ -16,6 +16,8 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+        ribbon  = tag --force _ribbon origin/master
+        catchup = log --patch --reverse --topo-order _ribbon..origin/master
 [color]
         diff = auto
         status = auto
