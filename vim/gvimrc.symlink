@@ -1,2 +1,7 @@
-set guifont=Inconsolata:h16
-call togglebg#map("<F5>")
+if has("gui_gtk2")
+  set guifont=Inconsolata\ 14
+elseif has("gui_win32")
+  set guifont=Inconsolata:h16
+endif
+
+colorscheme Tomorrow-Night-Eighties
