@@ -55,3 +55,6 @@
 [submodule "vim/vim.symlink/bundle/arduino"]
 	path = vim/vim.symlink/bundle/arduino
 	url = https://github.com/davejlong/vim-arduino.git
+[submodule "vim/vim.symlink/bundle/easymotion"]
+	path = vim/vim.symlink/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
