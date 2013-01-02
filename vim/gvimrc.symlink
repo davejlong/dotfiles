@@ -1,5 +1,5 @@
 if has("gui_gtk2")
-  set guifont=Inconsolata\ 14
+  set guifont=Inconsolata\ 12
 elseif has("gui_win32")
   set guifont=Inconsolata:h16
 endif
