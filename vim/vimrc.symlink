@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 call pathogen#infect()
 
 syntax on
@@ -11,7 +14,6 @@ set background=dark
 " Line Numbering
 set number
 set ruler
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " Line wrapping
 set nowrap
@@ -19,8 +21,9 @@ set nowrap
 " File Editing
 set relativenumber
 set undofile
-set list
-set listchars=tab:▸\ ,eol:¬
+set list 
+
+set listchars=trail:·,eol:¬
 
 " Searching
 nnoremap / /\v
@@ -45,7 +48,13 @@ set cinkeys=0{,0},:,0#,!,!^F
 " Line Wrapping
 set wrap
 set linebreak
-set nolist " List disables linebreak
+"set nolist " List disables linebreak
+
+" Use semi-colon instead of colon
+nnoremap ; : 
+
+" Allow root after opening file
+cmap w!! w !sudo tee % >/dev/null
 
 " Something to do with Less
 nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
@@ -58,9 +67,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 au FocusLost * :wa
 
 " Status line customization
-:set laststatus=2
-:set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
-:set statusline+=%=%{fugitive#statusline()}
+set laststatus=2
+set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
+set statusline+=%=%{fugitive#statusline()}
 
 " Leader Customizations
   " Strip all trailing whitespace in a file (,W)
