@@ -58,3 +58,6 @@
 [submodule "vim/vim.symlink/bundle/easymotion"]
 	path = vim/vim.symlink/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim/vim.symlink/bundle/matchtag"]
+	path = vim/vim.symlink/bundle/matchtag
+	url = https://github.com/gregsexton/MatchTag.git

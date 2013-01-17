@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Nyan Cat
+#
+telnet miku.acm.uiuc.edu 23
