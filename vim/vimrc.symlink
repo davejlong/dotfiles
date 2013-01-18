@@ -56,13 +56,6 @@ nnoremap ; :
 " Allow root after opening file
 cmap w!! w !sudo tee % >/dev/null
 
-" Something to do with Less
-nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
-
-" NERDTree Config
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " Save file on blur
 au FocusLost * :wa
 
@@ -82,3 +75,21 @@ set statusline+=%=%{fugitive#statusline()}
   nnoremap <leader><space> :noh<cr>
 
   nnoremap HH :silent !afplay ~/.vim/VicotryFanfare.mp3 <CR><C-l>
+
+" Plugin Setups
+" Something to do with Less
+nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+" NERDTree Config
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" MatchTagAlways
+let g:mta_use_matchparen_group = 1
+let g:mta_filetypes = {
+  \ 'html': 1,
+  \ 'xhtml': 1,
+  \ 'xml': 1,
+  \ 'cfml': 1,
+  \ 'cfscript': 1
+\}
