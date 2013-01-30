@@ -32,5 +32,3 @@
         user = davejlong
 [mergetool]
         keepBackup = false
-[push]
-	default = simple

@@ -1,4 +1,4 @@
-#include "./themes/solarized"
+#include ".dotfiles/xresources/themes/solarized"
 
 ! Set XTerm settings
 xterm*faceName: inconsolata::pixelsize=15
