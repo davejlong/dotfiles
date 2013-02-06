@@ -1,4 +1,9 @@
+!TomorrowNightEighties
 #include ".dotfiles/xresources/themes/solarized"
 
+*customization: -color
 ! Set XTerm settings
-xterm*faceName: inconsolata::pixelsize=15
+xterm*termName: xterm-256color
+XTerm*termName: xterm-256color
+xterm*faceName: inconsolata::pixelsize=13
+XTerm*faceName: inconsolata::pixelsize=13

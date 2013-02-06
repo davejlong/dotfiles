@@ -1,3 +1,5 @@
+set t_Co=256
+
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -8,8 +10,8 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme solarized
-set background=dark
+colorscheme Tomorrow-Night
+"set background=dark
 
 " Line Numbering
 set number
@@ -85,11 +87,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " MatchTagAlways
-let g:mta_use_matchparen_group = 1
+let g:mta_use_matchparen_group = 0
 let g:mta_filetypes = {
   \ 'html': 1,
   \ 'xhtml': 1,
   \ 'xml': 1,
-  \ 'cfml': 1,
-  \ 'cfscript': 1
+  \ 'cfml': 1
 \}

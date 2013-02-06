@@ -61,3 +61,6 @@
 [submodule "vim/vim.symlink/bundle/matchtagalways"]
 	path = vim/vim.symlink/bundle/matchtagalways
 	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "vim/vim.symlink/bundle/sqlserver"]
+	path = vim/vim.symlink/bundle/sqlserver
+	url = https://github.com/hoffstein/vim-tsql.git
