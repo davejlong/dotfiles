@@ -55,3 +55,15 @@
 [submodule "vim/vim.symlink/bundle/arduino"]
 	path = vim/vim.symlink/bundle/arduino
 	url = https://github.com/davejlong/vim-arduino.git
+[submodule "vim/vim.symlink/bundle/easymotion"]
+	path = vim/vim.symlink/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim/vim.symlink/bundle/matchtagalways"]
+	path = vim/vim.symlink/bundle/matchtagalways
+	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "vim/vim.symlink/bundle/sqlserver"]
+	path = vim/vim.symlink/bundle/sqlserver
+	url = https://github.com/hoffstein/vim-tsql.git
+[submodule "tmux/powerline"]
+	path = tmux/powerline
+	url = git://github.com/erikw/tmux-powerline.git

@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -25,4 +27,7 @@ proxy() { ssh -NCD 2001 davejlong@davidlong.dyndns.org; }
 mcd() { [[ -n "$1" ]] && mkdir -p "$1" && cd "$1"; } # mkdir and cd in one step
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.node/bin # Add Node to PATH for scripting
 PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
+
+export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'

@@ -1,3 +1,8 @@
+set t_Co=256
+
+scriptencoding utf-8
+set encoding=utf-8
+
 call pathogen#infect()
 
 syntax on
@@ -7,12 +12,10 @@ let mapleader = ","
 
 colorscheme Tomorrow-Night
 "set background=dark
-call togglebg#map("<F5>")
 
 " Line Numbering
 set number
 set ruler
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " Line wrapping
 set nowrap
@@ -20,8 +23,9 @@ set nowrap
 " File Editing
 set relativenumber
 set undofile
-set list
-set listchars=tab:▸\ ,eol:¬
+set list 
+
+set listchars=trail:·,eol:¬
 
 " Searching
 nnoremap / /\v
@@ -46,22 +50,21 @@ set cinkeys=0{,0},:,0#,!,!^F
 " Line Wrapping
 set wrap
 set linebreak
-set nolist " List disables linebreak
+"set nolist " List disables linebreak
 
-" Something to do with Less
-nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
+" Use semi-colon instead of colon
+nnoremap ; : 
 
-" NERDTree Config
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Allow root after opening file
+cmap w!! w !sudo tee % >/dev/null
 
 " Save file on blur
 au FocusLost * :wa
 
 " Status line customization
-:set laststatus=2
-:set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
-:set statusline+=%=%{fugitive#statusline()}
+set laststatus=2
+set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
+set statusline+=%=%{fugitive#statusline()}
 
 " Leader Customizations
   " Strip all trailing whitespace in a file (,W)
@@ -74,3 +77,20 @@ au FocusLost * :wa
   nnoremap <leader><space> :noh<cr>
 
   nnoremap HH :silent !afplay ~/.vim/VicotryFanfare.mp3 <CR><C-l>
+
+" Plugin Setups
+" Something to do with Less
+nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+" NERDTree Config
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" MatchTagAlways
+let g:mta_use_matchparen_group = 0
+let g:mta_filetypes = {
+  \ 'html': 1,
+  \ 'xhtml': 1,
+  \ 'xml': 1,
+  \ 'cfml': 1
+\}

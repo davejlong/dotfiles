@@ -8,6 +8,7 @@ tmp
 log
 *.log
 *.sqlite3
+.sass-cache
 
 # Eclipse / CF Builder
 .settings
