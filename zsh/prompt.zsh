@@ -83,3 +83,5 @@ precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
 }
+
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
