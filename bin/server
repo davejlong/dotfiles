@@ -1,0 +1,7 @@
+#!/bin/sh
+
+default_port=7000
+
+PORT=${1:-$default_port}
+
+python -m SimpleHTTPServer $PORT
