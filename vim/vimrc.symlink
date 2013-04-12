@@ -54,7 +54,11 @@ set cinkeys=0{,0},:,0#,!,!^F
 " Line Wrapping
 set wrap
 set linebreak
-"set nolist " List disables linebreak
+
+" Encryption method for vim -x https://coderwall.com/p/hypjbg
+if exists("&cryptmethod")
+  set cryptmethod=blowfish
+endif
 
 " Use semi-colon instead of colon
 nnoremap ; : 
@@ -89,6 +93,12 @@ nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
 " NERDTree Config
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeMinimalUI   = 1
+let NERDTreeDirArrows   = 0
+let NERDTreeChDirMode   = 0
+let NERDTreeIgnore      = ['\.pyc$', '\.rbc$', '\~$']
+let NERDTreeHijackNetrw = 0
+let g:nerdtree_tabs_startup_cd=0
 
 " MatchTagAlways
 let g:mta_use_matchparen_group = 0
