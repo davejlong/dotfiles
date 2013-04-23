@@ -3,3 +3,4 @@ if has("gui_gtk2")
 elseif has("gui_win32")
   set guifont=Inconsolata:h16
 endif
+colorscheme tomorrow

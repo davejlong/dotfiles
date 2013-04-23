@@ -46,3 +46,6 @@
 [submodule "tmux/powerline"]
 	path = tmux/powerline
 	url = git://github.com/erikw/tmux-powerline.git
+[submodule "vim/vim.symlink/bundle/coffeescript"]
+	path = vim/vim.symlink/bundle/coffeescript
+	url = https://github.com/kchmck/vim-coffee-script.git

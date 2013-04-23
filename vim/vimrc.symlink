@@ -10,12 +10,7 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme solarized
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+colorscheme tomorrow-night
 
 " Line Numbering
 set number
@@ -85,6 +80,9 @@ set statusline+=%=%{fugitive#statusline()}
   nnoremap <leader><space> :noh<cr>
 
   nnoremap HH :silent !afplay ~/.vim/VicotryFanfare.mp3 <CR><C-l>
+
+  " Replace current selected text
+  vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Plugin Setups
 " Something to do with Less
