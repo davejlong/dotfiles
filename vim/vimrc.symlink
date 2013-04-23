@@ -10,7 +10,7 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme tomorrow-night
+colorscheme Tomorrow-Night
 
 " Line Numbering
 set number
