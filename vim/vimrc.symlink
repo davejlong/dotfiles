@@ -91,7 +91,7 @@ set statusline+=%=%{fugitive#statusline()}
 nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 " NERDTree Config
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeMinimalUI   = 1
 let NERDTreeDirArrows   = 0
