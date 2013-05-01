@@ -88,16 +88,6 @@ set statusline+=%=%{fugitive#statusline()}
 " Something to do with Less
 nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
 
-" NERDTree Config
-"autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeMinimalUI   = 1
-let NERDTreeDirArrows   = 0
-let NERDTreeChDirMode   = 0
-let NERDTreeIgnore      = ['\.pyc$', '\.rbc$', '\~$']
-let NERDTreeHijackNetrw = 0
-let g:nerdtree_tabs_startup_cd=0
-
 " MatchTagAlways
 let g:mta_use_matchparen_group = 0
 let g:mta_filetypes = {

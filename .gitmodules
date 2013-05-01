@@ -7,9 +7,6 @@
 [submodule "vim/vim.symlink/bundle/ruby"]
 	path = vim/vim.symlink/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/vim.symlink/bundle/nerdtree"]
-	path = vim/vim.symlink/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/vim.symlink/bundle/rake"]
 	path = vim/vim.symlink/bundle/rake
 	url = https://github.com/tpope/vim-rake.git
