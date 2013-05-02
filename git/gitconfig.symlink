@@ -24,19 +24,9 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/davejlong/.gitignore_global
   editor = vim
 [apply]
   whitespace = nowarn
 [github]
   user = davejlong
-[mergetool]
-  keepBackup = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-# [merge]
-#   ff = false
