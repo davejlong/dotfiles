@@ -20,7 +20,7 @@ set ruler
 set nowrap
 
 " File Editing
-set relativenumber
+"set relativenumber Turned off because it is making Vim dog-slow
 set undofile
 set list 
 
