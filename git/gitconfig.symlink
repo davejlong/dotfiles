@@ -24,7 +24,7 @@
   status = auto
   branch = auto
 [core]
-  #excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = vim
 [apply]
   whitespace = nowarn
