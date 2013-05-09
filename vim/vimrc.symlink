@@ -25,6 +25,7 @@ set undofile
 set list 
 
 set listchars=trail:·,eol:¬
+set colorcolumn=80 " Mark 80th column so as to not make lines too long
 
 " Searching
 nnoremap / /\v
