@@ -1,3 +1,0 @@
-exec startxfce4
-
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
