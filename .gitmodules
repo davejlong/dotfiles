@@ -40,3 +40,6 @@
 [submodule "vim/vim.symlink/bundle/coffeescript"]
 	path = vim/vim.symlink/bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/vim.symlink/bundle/rails"]
+	path = vim/vim.symlink/bundle/rails
+	url = https://github.com/tpope/vim-rails.git
