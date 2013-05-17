@@ -22,7 +22,6 @@ settings.xml
 
 # Vagrant
 .vagrant
-Vagrantfile
 
 # ColdFusion
 CFIDE

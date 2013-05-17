@@ -30,5 +30,3 @@
   whitespace = nowarn
 [github]
   user = davejlong
-[push]
-	default = simple
