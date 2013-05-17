@@ -1,6 +1,5 @@
 # Check for a local install
-[ -f "~/.rvm/scripts/rvm" ] && source ~/.rvm/scripts/rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# TODO: Why does RVM brake when I have this?
 # Check for a multiuser install
-#[ -f "/usr/local/rvm/scripts/rvm" ] && source /usr/local/rvm/scripts/rvm
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
