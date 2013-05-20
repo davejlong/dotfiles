@@ -1,0 +1,23 @@
+Conky in Google Now Style.
+
+The font used is "Open Sans Light" - http://opensans.com/
+
+The wallpaper used in the screenshot can be found here - http://fav.me/d5utjso
+
+---
+
+Installation Instructions:
+
+1. First install "conky" if you don't have it, also ensure that you have "curl" installed.
+
+2. Extract contents of the archive into your home folder.
+
+3. Open the file ".conkyrc" with a text editor, search for "2294941" and replace it with the WOEID of your own location. To find your WOEID, browse or search for your city from the Yahoo Weather home page - http://weather.yahoo.com/ . The WOEID is in the URL for the forecast page for that city.
+
+4. Add "conky" to your Startup Applications.
+
+5. Enjoy!
+
+---
+
+License: GPL-3.0+
