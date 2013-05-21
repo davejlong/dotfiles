@@ -1,8 +1,29 @@
-if has("gui_gtk2")
-  set guifont=Inconsolata\ 13
-elseif has("gui_win32")
+if has("gui_gtk2") " Linux
+  set guifont=ArchitectsDaughter\ 9
+elseif has("gui_win32") " Windows
   set guifont=Inconsolata:h16
-elseif has("gui_macvim")
+elseif has("gui_macvim") " Mac
   set guifont=Inconsolata:h14
 endif
 colorscheme Tomorrow
+"set background=light
+
+" Change the colorscheme based on time (light during day, dark at night)
+" function! SetSolarizedBackground()
+"   if strftime("%H") >= 5 && strftime("%H") < 17
+"     if &background != 'light'
+"       set background=light
+"     endif
+"   else
+"     if &background != 'dark'
+"       set background=dark
+"     endif
+"   endif
+" endfunction
+" Set the bacgrkound on launch
+" call SetSolarizedBackground()
+
+" Check if we need to update the background on save
+" if has("autocmd")
+"   autocmd bufwritepost * call SetSolarizedBackground()
+" endif
