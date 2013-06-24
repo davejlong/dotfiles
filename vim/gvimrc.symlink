@@ -1,5 +1,5 @@
 if has("gui_gtk2") " Linux
-  set guifont=ArchitectsDaughter\ 9
+  set guifont=Inconsolata\ 12
 elseif has("gui_win32") " Windows
   set guifont=Inconsolata:h16
 elseif has("gui_macvim") " Mac
