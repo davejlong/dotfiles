@@ -6,7 +6,7 @@
 " Created:  In the middle of the night
 " Modified: 2011 May 05
 "
-" Usage "{{{
+" Usage 
 "
 " ---------------------------------------------------------------------
 " ABOUT:
@@ -129,8 +129,8 @@
 " http://vimcasts.org/episodes/creating-colorschemes-for-vim/
 " http://www.frexx.de/xterm-256-notes/"
 "
-" }}}
-" Environment Specific Overrides "{{{
+" 
+" Environment Specific Overrides 
 " Allow or disallow certain features based on current terminal emulator or 
 " environment.
 
@@ -156,8 +156,8 @@ else
     endfor
 endif
 
-" }}}
-" Default option values"{{{
+" 
+" Default option values
 " ---------------------------------------------------------------------
 " s:options_list is used to autogenerate a list of all non-default options 
 " using "call SolarizedOptions()" or with the "Generate .vimrc commands" 
@@ -222,8 +222,8 @@ call s:SetOption("diffmode","normal")
 call s:SetOption("hitrail",0)
 call s:SetOption("menu",1)
 
-"}}}
-" Colorscheme initialization "{{{
+
+" Colorscheme initialization 
 " ---------------------------------------------------------------------
 hi clear
 if exists("syntax_on")
@@ -231,7 +231,7 @@ if exists("syntax_on")
 endif
 let colors_name = "solarized"
 
-"}}}
+
 " GUI & CSApprox hexadecimal palettes"{{{
 " ---------------------------------------------------------------------
 "
