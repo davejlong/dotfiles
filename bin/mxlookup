@@ -5,12 +5,10 @@
 # USAGE:
 #
 #   $ mxlookup davejlong.com
-#   # => davejlong.com mail is handled by 30 ASPMX4.GOOGLEMAIL.com.
-#   # => davejlong.com mail is handled by 10 ASPMX.L.GOOGLE.com.
-#   # => davejlong.com mail is handled by 20 ALT1.ASPMX.L.GOOGLE.com.
-#   # => davejlong.com mail is handled by 30 ASPMX5.GOOGLEMAIL.com.
-#   # => davejlong.com mail is handled by 30 ASPMX2.GOOGLEMAIL.com.
-#   # => davejlong.com mail is handled by 20 ALT2.ASPMX.L.GOOGLE.com.
-#   # => davejlong.com mail is handled by 30 ASPMX3.GOOGLEMAIL.com.
+#   # => 10 aspmx.l.google.com.
+#   # => 20 alt2.aspmx.l.google.com.
+#   # => 20 alt1.aspmx.l.google.com.
+#   # => 30 aspmx3.googlemail.com.
+#   # => 30 aspmx2.googlemail.com.
 
-host -t mx "$1"
+dig +short MX "$1"
