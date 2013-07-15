@@ -49,3 +49,6 @@
 [submodule "vim/vim.symlink/bundle/bundler"]
 	path = vim/vim.symlink/bundle/bundler
 	url = https://github.com/tpope/vim-bundler
+[submodule "vim/vim.symlink/bundle/wakatime"]
+	path = vim/vim.symlink/bundle/wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
