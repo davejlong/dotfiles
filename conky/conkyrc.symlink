@@ -1,90 +1,36 @@
-# Conky Google Now style #
-
-# Conky settings #
-background no
-update_interval 1
-double_buffer yes
-no_buffers yes
-
-# Window specifications #
+# -- Conky settings by giancarlo64.deviantart.com -- #
+use_xft yes
+xftfont xftfont bahamas:size=6.6
+alignment bl
+gap_x 60
+gap_y 0
+xftalpha 1
+update_interval 1.0
+maximum_width 500
+minimum_size 500 150
 own_window yes
-own_window_type conky
+own_window_type desktop
+own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_title 
-own_window_colour 2D2D2D
-
-minimum_size 250
-
-# Alignment #
-alignment tr
-gap_x 100
-gap_y 100
-
-border_inner_margin 15
-border_outer_margin 0
-
-# Graphics settings #
+double_buffer yes
 draw_shades no
 draw_outline no
 draw_borders no
-draw_graph_borders no
+stippled_borders 10
+border_margin 4
+border_width 1
+default_shade_color 000000
+default_outline_color 000000
+default_color bcbcbc
+use_spacer right
+no_buffers yes
+uppercase no
 
-# Text settings #
-use_xft yes
-xftalpha 0
-xftfont Open Sans Light:size=10
-
-override_utf8_locale yes
-
-imlib_cache_size 0
-
-# Color scheme #
-default_color DCDCDC
-
-color1 0099CC
-color2 9933CC
-color3 669900
-color4 FF8800
-color5 CC0000
-color6 AAAAAA
-color7 484848
+lua_load ~/.dotfiles/conky/clock_rings.lua
+  lua_draw_hook_pre clock_rings
 
 TEXT
-${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=12760439&u=f" -o ~/.cache/weather.xml}${font Open Sans Light:size=15}${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}, ${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "country=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font}
-${font Open Sans Light:size=45}${alignr}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}
-${execi 300 cp -f ~/.weathericons/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 0,45 -s 60x60}
-${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
-${color6}${execi 300 grep "yweather:wind" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${execi 300 grep "yweather:units" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${color}
-${execi 300 cp -f ~/.weathericons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | head -n1).png ~/.cache/weather-today.png}${image ~/.cache/weather-today.png -p 0,175 -s 30x30}${execi 300 cp -f ~/.weathericons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tail -n1).png ~/.cache/weather-tomorrow.png}${image ~/.cache/weather-tomorrow.png -p 130,175 -s 30x30}
-${goto 60}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | head -n1}${goto 190}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tail -n1}
-${goto 60}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | head -n1}° ${color6}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | head -n1}°${color}${goto 190}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tail -n1}° ${color6}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tail -n1}°${color}${voffset 15}
-${color7}${hr}${color}
-${if_existing /proc/net/route wlan0}
-${color1}Up:${color} ${color3}${upspeed wlan0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed wlan0}${color}
-${upspeedgraph wlan0 50,120 FF8800 FF8800}${alignr}${downspeedgraph wlan0 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup wlan0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown wlan0}${color}
-${else}${if_existing /proc/net/route wlan1}
-${color1}Up:${color} ${color3}${upspeed wlan1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed wlan1}${color}
-${upspeedgraph wlan1 50,120 FF8800 FF8800}${alignr}${downspeedgraph wlan1 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup wlan1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown wlan1}${color}
-${else}${if_existing /proc/net/route eth0}
-${color1}Up:${color} ${color3}${upspeed eth0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed eth0}${color}
-${upspeedgraph eth0 50,120 FF8800 FF8800}${alignr}${downspeedgraph eth0 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup eth0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown eth0}${color}
-${else}${if_existing /proc/net/route eth1}
-${color1}Up:${color} ${color3}${upspeed eth1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed eth1}${color}
-${upspeedgraph eth1 50,120 FF8800 FF8800}${alignr}${downspeedgraph eth1 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup eth1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown eth1}${color}
-${else}${if_existing /proc/net/route ppp0}
-${color1}Up:${color} ${color3}${upspeed ppp0}${color}${alignr}${color1}Down:${color} ${color3}${downspeed ppp0}${color}
-${upspeedgraph ppp0 50,120 FF8800 FF8800}${alignr}${downspeedgraph ppp0 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup ppp0}${color}${alignr}${color1}Received:${color} ${color2}${totaldown ppp0}${color}
-${else}${if_existing /proc/net/route ppp1}
-${color1}Up:${color} ${color3}${upspeed ppp1}${color}${alignr}${color1}Down:${color} ${color3}${downspeed ppp1}${color}
-${upspeedgraph ppp1 50,120 FF8800 FF8800}${alignr}${downspeedgraph ppp1 50,120 FF8800 FF8800}
-${color1}Sent:${color} ${color2}${totalup ppp1}${color}${alignr}${color1}Received:${color} ${color2}${totaldown ppp1}${color}
-${else}
-Network disconnected
-${color6}Connect to a network to see statistics${color}
-${voffset 50}
-${endif}${endif}${endif}
+${image ~/.dotfiles/conky/bo.png -p 5,16}${voffset 28}${offset 93}${font OpenLogos:size=19}y${font}${offset 10}${voffset -8}${kernel}${goto 237}${voffset -7}${font cellpic:size=18}N${font} ${offset 8}${voffset -3}${battery_bar 4,18}
+${voffset 6}${offset 101}${font PizzaDude Bullets:size=13}q${font}${offset 13}${voffset -2}${time %A %d.%m.%Y}
+${voffset 10}${offset 102}${font ConkySymbols:size=9}b${font}${goto 137}${voffset -3}${downspeed wlan0}  -  ${upspeed wlan0}${goto 232}${voffset -5}${font ConkySymbols:size=12}D${font}${offset 8}${voffset -3}${uptime_short}
+
