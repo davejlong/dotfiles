@@ -86,6 +86,9 @@ set statusline+=%=%{fugitive#statusline()}
   " Replace current selected text
   vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+  " vsplit the pane
+  nnoremap <leader>vs :vsplit<cr>
+
 " Plugin Setups
 " Something to do with Less
 nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
