@@ -7,7 +7,7 @@ autoload colors && colors
 # https://raw.github.com/jm3/dotfiles/master/prompt.gif
 
 awesome_davejlong_prompt() {
-  arrow="%{$fg[red]%}➜"
+  arrow="%{$fg[red]%}›"
   cwd="%{$fg[cyan]%}%B%3c%(#.#.)%b"
 
   git_info() {
@@ -27,7 +27,7 @@ awesome_davejlong_prompt() {
     fi
   }
 
-  echo -n "${arrow} ${cwd}$( git_info) > "
+  echo -n "${cwd}$( git_info) ${arrow}%{$reset_color%} "
 }
 
 export PROMPT='$(awesome_davejlong_prompt)'
