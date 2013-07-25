@@ -26,7 +26,6 @@ if !has("gui_running")
 	let s:selection = "585858"
 end
 
-set background=dark
 hi clear
 syntax reset
 
@@ -246,7 +245,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
-	call <SID>X("TabLine", s:foreground, s:background, "reverse")
+	call <SID>X("TabLine", s:window, s:foreground, "reverse")
+	call <SID>X("TabLineFill", s:window, s:foreground, "reverse")
 	call <SID>X("StatusLine", s:window, s:yellow, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:foreground, "reverse")
 	call <SID>X("VertSplit", s:window, s:window, "none")
@@ -272,7 +272,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Standard Highlighting
 	call <SID>X("Comment", s:comment, "", "")
-	call <SID>X("Todo", s:yellow, s:background, "")
+	call <SID>X("Todo", s:comment, s:background, "")
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:red, "", "none")
 	call <SID>X("Statement", s:foreground, "", "")
@@ -310,6 +310,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Ruby Highlighting
 	call <SID>X("rubySymbol", s:green, "", "")
 	call <SID>X("rubyConstant", s:yellow, "", "")
+	call <SID>X("rubyAccess", s:yellow, "", "")
 	call <SID>X("rubyAttribute", s:blue, "", "")
 	call <SID>X("rubyInclude", s:blue, "", "")
 	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
@@ -318,12 +319,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
 	call <SID>X("rubyConditional", s:purple, "", "")
 	call <SID>X("rubyRepeat", s:purple, "", "")
+	call <SID>X("rubyControl", s:purple, "", "")
+	call <SID>X("rubyException", s:purple, "", "")
 
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
 	call <SID>X("pythonStatement", s:purple, "", "")
 	call <SID>X("pythonConditional", s:purple, "", "")
+	call <SID>X("pythonRepeat", s:purple, "", "")
+	call <SID>X("pythonException", s:purple, "", "")
 	call <SID>X("pythonFunction", s:blue, "", "")
+	call <SID>X("pythonPreCondit", s:purple, "", "")
+	call <SID>X("pythonRepeat", s:aqua, "", "")
+	call <SID>X("pythonExClass", s:orange, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:foreground, "", "")
@@ -333,15 +341,43 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptNumber", s:orange, "", "")
 	call <SID>X("javaScriptMember", s:orange, "", "")
 
+	" HTML Highlighting
+	call <SID>X("htmlTag", s:red, "", "")
+	call <SID>X("htmlTagName", s:red, "", "")
+	call <SID>X("htmlArg", s:red, "", "")
+	call <SID>X("htmlScriptTag", s:red, "", "")
+
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
 
-    " ShowMarks Highlighting
-    call <SID>X("ShowMarksHLl", s:orange, s:background, "none")
-    call <SID>X("ShowMarksHLo", s:purple, s:background, "none")
-    call <SID>X("ShowMarksHLu", s:yellow, s:background, "none")
-    call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
+	" ShowMarks Highlighting
+	call <SID>X("ShowMarksHLl", s:orange, s:background, "none")
+	call <SID>X("ShowMarksHLo", s:purple, s:background, "none")
+	call <SID>X("ShowMarksHLu", s:yellow, s:background, "none")
+	call <SID>X("ShowMarksHLm", s:aqua, s:background, "none")
+
+	" Cucumber Highlighting
+	call <SID>X("cucumberGiven", s:blue, "", "")
+	call <SID>X("cucumberGivenAnd", s:blue, "", "")
+
+	" Go Highlighting
+	call <SID>X("goDirective", s:purple, "", "")
+	call <SID>X("goDeclaration", s:purple, "", "")
+	call <SID>X("goStatement", s:purple, "", "")
+	call <SID>X("goConditional", s:purple, "", "")
+	call <SID>X("goConstants", s:orange, "", "")
+	call <SID>X("goTodo", s:yellow, "", "")
+	call <SID>X("goDeclType", s:blue, "", "")
+	call <SID>X("goBuiltins", s:purple, "", "")
+
+	" Lua Highlighting
+	call <SID>X("luaStatement", s:purple, "", "")
+	call <SID>X("luaRepeat", s:purple, "", "")
+	call <SID>X("luaCondStart", s:purple, "", "")
+	call <SID>X("luaCondElseif", s:purple, "", "")
+	call <SID>X("luaCond", s:purple, "", "")
+	call <SID>X("luaCondEnd", s:purple, "", "")
 
 	" Delete Functions
 	delf <SID>X
@@ -354,3 +390,5 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	delf <SID>grey_level
 	delf <SID>grey_number
 endif
+
+set background=dark

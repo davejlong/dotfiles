@@ -10,7 +10,7 @@ set nocompatible
 
 let mapleader = ","
 
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow
 " colorscheme solarized
 " set background=dark
 
