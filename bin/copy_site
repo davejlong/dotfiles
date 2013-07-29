@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Download a copy of a website
+#
+# USAGE:
+#
+#     $ copy_site davejlong.com
+#     # Downloads a fully functional copy of davejlong.com into ./davejlong.com
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows $1

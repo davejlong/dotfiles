@@ -1,3 +1,5 @@
 (load-file "~/.emacs.d/color-theme/themes/color-theme-tomorrow.el")
 ; (load-file "~/.emacs.d/color-theme/themes/tomorrow-night-theme.el")
-(load-file "~/.emacs.d/color-theme/themes/tomorrow-night-eighties-theme.el")
+(load-file "~/.emacs.d/color-theme/themes/tomorrow-day-theme.el")
+
+(global-linum-mode t)

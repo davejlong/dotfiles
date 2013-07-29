@@ -1,4 +1,4 @@
-set t_Co=256
+"set t_Co=256
 
 scriptencoding utf-8
 set encoding=utf-8
@@ -10,9 +10,8 @@ set nocompatible
 
 let mapleader = ","
 
-"colorscheme Tomorrow
-" colorscheme solarized
-" set background=dark
+set background=light
+colorscheme solarized
 
 " Line Numbering
 set number
