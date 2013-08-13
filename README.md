@@ -1,6 +1,10 @@
 # My Dotfiles
 ## Installation
-To install clone into your user root at .dotfiles (`git clone https://github.com/davejlong/dotfiles ~/.dotfiles`) then run the Rake in the .dotfiles directions (`cd ~/.dotfiles && rake`)
+1. `git clone https://github.com/davejlong/dotfiles ~/.dotfiles`
+2. `cd ~/.dotfiles`
+3. `./script/bootstrap`
+
+This will install rbenv and ruby-build, install all submodules and symlink all dotfiles into place.
 
 ## To do
 
