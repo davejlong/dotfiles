@@ -11,7 +11,7 @@ set nocompatible
 let mapleader = ","
 
 set background=light
-colorscheme solarized
+"colorscheme solarized
 
 " Line Numbering
 set number
