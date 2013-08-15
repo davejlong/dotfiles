@@ -49,25 +49,18 @@ setup_gitconfig () {
 }
 
 install_rbenv () {
-  if [ "$(uname -s)" == "Darwin" ]
+  # Install from Git
+  if [ -e "$HOME/.rbenv" ]
   then
-    # Install from Homebrew
-    brew install rbenv
-    brew install ruby-build
+    info "Skipping rbenv. It's already installed."
   else
-    # Install from Git
-    if [ -e "$HOME/.rbenv" ]
-    then
-      info "Skipping rbenv. It's already installed."
-    else
-      git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"
-    fi
-    if [ -e "$HOME/.rbenv/plugins/ruby-build" ]
-    then
-      info "Skipping ruby-build. It's already installed."
-    else
-      git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-    fi
+    git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"
+  fi
+  if [ -e "$HOME/.rbenv/plugins/ruby-build" ]
+  then
+    info "Skipping ruby-build. It's already installed."
+  else
+    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   fi
 
   exec $SHELL -l
