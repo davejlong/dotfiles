@@ -13,9 +13,6 @@
 [submodule "vim/vim.symlink/bundle/cf-utils"]
 	path = vim/vim.symlink/bundle/cf-utils
 	url = https://github.com/davejlong/cf-utils.vim.git
-[submodule "vim/vim.symlink/bundle/zencoding"]
-	path = vim/vim.symlink/bundle/zencoding
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule "vim/vim.symlink/bundle/unimpaired"]
 	path = vim/vim.symlink/bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
