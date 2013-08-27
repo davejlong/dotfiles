@@ -143,10 +143,20 @@ install_dotfiles () {
   done
 }
 
+setup_gnome_colors () {
+  info "setting up color scheme for terminal"
+  wget -qO- https://raw.github.com/chriskempson/tomorrow-theme/master/Gnome-Terminal/setup-theme.sh | bash
+  success "color scheme setup"
+}
+
 setup_gitconfig
-install_rbenv
-install_submodules
+#install_rbenv
+#install_submodules
 install_dotfiles
+
+if [[ "$(uname -v)" == *Ubuntu* ]]; then
+  setup_gnome_colors
+fi
 
 echo ''
 echo '  All installed!'
