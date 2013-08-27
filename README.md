@@ -14,7 +14,7 @@ These are the usual things I install with my dotfiles.
     add-apt-repository ppa:chris-lea/node.js
     add-apt-repository ppa:tuxpoldo/btsync
     apt-get update
-    apt-get install virtaulbox-qt vim-gtk tmux zsh conky-all sni-qt sni-qt:i386 chromium-browser
+    apt-get install virtaulbox-qt vim-gtk tmux zsh conky-all sni-qt sni-qt:i386 chromium-browser git
 
 ## To do
 
