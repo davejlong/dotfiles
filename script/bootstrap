@@ -48,6 +48,16 @@ setup_gitconfig () {
   fi
 }
 
+install_nvm () {
+  if [ -e "$HOME/.nvm" ]
+  then
+    info "Skipping NVM. It's already installed"
+  else
+    curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+  fi
+  source $HOME/.nvm/nvm.sh
+}
+
 install_rvm () {
   # Install from Git
   if [ -e "$HOME/.rvm" ]
@@ -149,6 +159,7 @@ if [[ "$(uname -v)" == *Ubuntu* ]]; then
   setup_gnome_colors
 fi
 
+install_nvm
 install_rvm
 
 echo ''
