@@ -48,23 +48,15 @@ setup_gitconfig () {
   fi
 }
 
-install_rbenv () {
+install_rvm () {
   # Install from Git
-  if [ -e "$HOME/.rbenv" ]
+  if [ -e "$HOME/.rvm" ]
   then
-    info "Skipping rbenv. It's already installed."
+    info "Skipping RVM. It's already installed."
   else
-    git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"
+    curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
   fi
-  if [ -e "$HOME/.rbenv/plugins/ruby-build" ]
-  then
-    info "Skipping ruby-build. It's already installed."
-  else
-    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  fi
-
-  exec $SHELL -l
-  rbenv init -
+  source ~/.zprofile
 }
 
 install_submodules () {
@@ -150,13 +142,14 @@ setup_gnome_colors () {
 }
 
 setup_gitconfig
-#install_rbenv
-#install_submodules
+install_submodules
 install_dotfiles
 
 if [[ "$(uname -v)" == *Ubuntu* ]]; then
   setup_gnome_colors
 fi
+
+install_rvm
 
 echo ''
 echo '  All installed!'
