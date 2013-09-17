@@ -10,24 +10,7 @@ awesome_davejlong_prompt() {
   arrow="%{$fg[red]%}›"
   cwd="%{$fg[cyan]%}%B%3c%(#.#.)%b"
 
-  git_info() {
-    is_git_dirty() {
-      git status --porcelain | egrep "\sM|\sD|\?\?" &> /dev/null
-    }
-    branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //' `
-    if [ ! -z "${branch}" ];
-    then
-      is_git_dirty
-      if [ $? -eq 0 ];
-      then
-        git_filth=" %{$fg[yellow]%}✗%{$reset_color%}"
-      fi
-      git_branch=" (%{$fg[red]%}${branch}%{$reset_color%})"
-      echo -n "${git_branch}${git_filth}"
-    fi
-  }
-
-  echo -n "${cwd}$( git_info) ${arrow}%{$reset_color%} "
+  echo -n "${cwd} ${arrow}%{$reset_color%} "
 }
 
 export PROMPT='$(awesome_davejlong_prompt)'

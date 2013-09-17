@@ -21,5 +21,6 @@ set-option -g status-justify "centre"
 
 #set-option -g status-right-length 30
 #set-option -g status-right "#($ZSH/tmux/powerline/powerline.sh right)"
+source "$HOME/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf"
 
 set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
