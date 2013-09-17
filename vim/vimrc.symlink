@@ -87,7 +87,7 @@ set statusline+=%=%{fugitive#statusline()}
   vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
   " vsplit the pane
-  nnoremap <leader>vs :vsplit<cr>
+  nnoremap <leader>v :vsplit<cr>
 
 " Plugin Setups
 " Something to do with Less
