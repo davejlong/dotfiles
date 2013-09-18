@@ -1,26 +1,40 @@
-# Improve colors
-set -g default-terminal "screen-256color"
+# improve colors
+set -g default-terminal 'screen-256color'
 
-# Remap prefix
+# act like vim
+setw -g mode-keys vi
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind-key -r C-h select-window -t :-
+bind-key -r C-l select-window -t :+
+
+# act like GNU screen
+unbind C-b
 set -g prefix C-a
 
-# keybindings to make resizing easier
-bind -r C-h resize-pane -L
-bind -r C-j resize-pane -D
-bind -r C-k resize-pane -U
-bind -r C-l resize-pane -R
+# start window numbers at 1 to match keyboard order with tmux window order
+set -g base-index 1
 
+# renumber windows sequentially after closing any of them
+set -g renumber-windows on
 
-set-option -g status on
-set-option -g status-interval 1
-set-option -g status-utf8 on
-set-option -g status-justify "centre"
+# soften status bar color from harsh green to light gray
+set -g status-bg '#666666'
+set -g status-fg '#aaaaaa'
 
-#set-option -g status-left-length 60
-#set-option -g status-left "#($ZSH/tmux/powerline/powerline.sh left)"
+# remove administrative debris (session name, hostname, time) in status bar
+set -g status-left ''
+set -g status-right ''
 
-#set-option -g status-right-length 30
-#set-option -g status-right "#($ZSH/tmux/powerline/powerline.sh right)"
-source "$HOME/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf"
+# increase scrollback lines
+set -g history-limit 10000
 
-set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
+# switch to last pane
+bind-key C-a last-pane
+
+if-shell "[ -f $POWERLINE_HOME/bindings/tmux/powerline.conf ]" 'source $POWERLINE_HOME/bindings/tmux/powerline.conf'
+
+# Local config
+if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
