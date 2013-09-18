@@ -27,7 +27,6 @@ then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-proxy() { ssh -NCD 2001 davejlong@davidlong.dyndns.org; }
 mcd() { [[ -n "$1" ]] && mkdir -p "$1" && cd "$1"; } # mkdir and cd in one step
 
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
