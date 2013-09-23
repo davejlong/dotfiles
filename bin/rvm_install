@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Installs the ruby for the current project with RVM
+#
+# Usage
+#   $ cd my_ruby_project
+#   $ rvm_install
+#
+if [ -f ./.ruby-version ]; then
+  rvm install `cat .ruby-version`
+fi
