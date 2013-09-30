@@ -6,3 +6,4 @@ else
 fi
 
 source $POWERLINE_HOME/bindings/zsh/powerline.zsh
+tmux source-file $POWERLINE_HOME/bindings/tmux/powerline.conf

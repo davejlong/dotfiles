@@ -105,3 +105,6 @@ let g:mta_filetypes = {
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
+
+" Set .god files to use Ruby syntax
+au BufNewFile,BufRead *.god set filetype=ruby

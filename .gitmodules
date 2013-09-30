@@ -55,3 +55,6 @@
 [submodule "vim/vim.symlink/bundle/ruby-minitest"]
 	path = vim/vim.symlink/bundle/ruby-minitest
 	url = https://github.com/sunaku/vim-ruby-minitest.git
+[submodule "vim/vim.symlink/bundle/emmet"]
+	path = vim/vim.symlink/bundle/emmet
+	url = https://github.com/mattn/emmet-vim.git
