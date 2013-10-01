@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+require 'un'
+##
+# Run WEBrick HTTP server.
+#
+#   ruby -run -e httpd -- [OPTION] DocumentRoot
+#
+#   --bind-address=ADDR         address to bind
+#   --port=NUM                  listening port number
+#   --max-clients=MAX           max number of simultaneous clients
+#   --temp-dir=DIR              temporary directory
+#   --do-not-reverse-lookup     disable reverse lookup
+#   --request-timeout=SECOND    request timeout in seconds
+#   --http-version=VERSION      HTTP version
+#   -v                          verbose
+##
+
+def httpd
+  setup("", "BindAddress=ADDR", "Port=PORT", "MaxClients=NUM", "TempDir=DIR", "DoNotReverseLookup", "RequestTimeout=SECOND", "HTTPVersion=VERSION") do |argv, options|
+    require 'webrick'
+    options[:Port] = options[:Port] || 7000
+    opt = options[:RequestTimeout] and options[:RequestTimeout] = opt.to_i
+    [:Port, :MaxClients].each do |name|
+      opt = options[name] and (options[name] = Integer(opt)) rescue nil
+    end
+    unless argv.empty?
+      options[:DocumentRoot] = argv.shift
+    end
+    p options
+    s = WEBrick::HTTPServer.new(options)
+
+    shut = proc {s.shutdown}
+    Signal.trap("TERM", shut)
+    Signal.trap("QUIT", shut) if Signal.list.has_key?("QUIT")
+    if STDIN.tty?
+      Signal.trap("HUP", shut) if Signal.list.has_key?("HUP")
+      Signal.trap("INT", shut)
+    end
+    s.start
+  end
+end
+
+httpd

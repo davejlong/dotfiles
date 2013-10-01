@@ -4,4 +4,4 @@ default_port=7000
 
 PORT=${1:-$default_port}
 
-ruby -run -e httpd . -p $PORT
+ruby -run -e httpd . --port $PORT
