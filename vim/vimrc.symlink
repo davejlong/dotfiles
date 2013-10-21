@@ -26,7 +26,7 @@ set undofile
 set list 
 
 set listchars=trail:·,eol:¬
-set colorcolumn=80 " Mark 80th column so as to not make lines too long
+" set colorcolumn=80 " Mark 80th column so as to not make lines too long
 
 " Searching
 nnoremap / /\v
@@ -37,8 +37,8 @@ set ignorecase
 set smartcase
 set gdefault
 set showmatch
-nnoremap <Tab> %
-vnoremap <Tab> %
+"nnoremap <Tab> %
+"vnoremap <Tab> %
 
 " Indentation
 set smartindent
@@ -59,6 +59,9 @@ endif
 
 " Use semi-colon instead of colon
 nnoremap ; : 
+
+" Save with W
+cnoreabbrev W w
 
 " Allow root after opening file
 cmap w!! w !sudo tee % >/dev/null
