@@ -105,5 +105,9 @@ let g:mta_filetypes = {
   \ 'cfml': 1
 \}
 
+if file_readable(expand("$HOME/.vimrc.local"))
+  source $HOME/.vimrc.local
+endif
+
 " Set .god files to use Ruby syntax
 au BufNewFile,BufRead *.god set filetype=ruby

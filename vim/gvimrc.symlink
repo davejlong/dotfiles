@@ -6,3 +6,7 @@ elseif has("gui_macvim") " Mac
   set guifont=Inconsolata:h14
 endif
 colorscheme Tomorrow
+
+if file_readable(expand("$HOME/.gvimrc.local"))
+  source $HOME/.gvimrc.local
+endif
