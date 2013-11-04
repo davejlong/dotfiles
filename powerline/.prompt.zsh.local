@@ -1,2 +1,2 @@
-. "$HOME/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
+. "$POWERLINE_HOME/bindings/zsh/powerline.zsh"
 

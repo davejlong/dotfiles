@@ -1,7 +1,12 @@
-#!/bin/sh
+#!/bin/zsh
 
-default_port=7000
+if [[ -f './script/rails' || -f './bin/rails' ]];
+then
+  rails s
+else
+  default_port=7000
 
-PORT=${1:-$default_port}
+  PORT=${1:-$default_port}
 
-ruby -run -e httpd . --port $PORT
+  ruby -run -e httpd . --port $PORT
+fi
