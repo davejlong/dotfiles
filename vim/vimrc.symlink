@@ -7,7 +7,6 @@ call pathogen#infect()
 
 syntax on
 set nocompatible
-
 let mapleader = ","
 
 set background=dark
@@ -111,3 +110,16 @@ endif
 
 " Set .god files to use Ruby syntax
 au BufNewFile,BufRead *.god set filetype=ruby
+
+nnoremap h <nop>
+nnoremap l <nop>
+nnoremap j <nop>
+nnoremap k <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

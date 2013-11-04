@@ -1,1 +1,2 @@
+export POWERLINE_HOME="/usr/local/lib/python2.7/site-packages/powerline"
 export PATH="$PATH:$HOME/.local/bin"
