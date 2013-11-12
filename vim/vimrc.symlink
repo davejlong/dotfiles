@@ -25,7 +25,7 @@ set undofile
 set list 
 
 set listchars=trail:·,eol:¬
-" set colorcolumn=80 " Mark 80th column so as to not make lines too long
+set colorcolumn=80 " Mark 80th column so as to not make lines too long
 
 " Searching
 nnoremap / /\v
@@ -111,10 +111,6 @@ endif
 " Set .god files to use Ruby syntax
 au BufNewFile,BufRead *.god set filetype=ruby
 
-nnoremap h <nop>
-nnoremap l <nop>
-nnoremap j <nop>
-nnoremap k <nop>
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
