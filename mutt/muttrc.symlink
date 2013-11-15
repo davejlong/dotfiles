@@ -1,9 +1,9 @@
 # Gmail setup for Mutt
 
 set imap_user = "david@recruitics.com"
-set imap_pass = "`grep 'Gmail' ~/Private/passwords.txt | gawk '{print $2}'`"
+set imap_pass = "`ack-grep "Gmail\s'([^']+)'" --output '$1' $HOME/Private/passwords.txt`"
 set smtp_url = "smtp://david@recruitics.com@smtp.gmail.com:587/"
-set smtp_pass = "`grep 'Gmail' ~/Private/passwords.txt | gawk '{print $2}'`"
+set smtp_pass = "`ack-grep "Gmail\s'([^']+)'" --output '$1' $HOME/Private/passwords.txt`"
 
 set from = "david@recruitics.com"
 set realname = "Dave Long"
