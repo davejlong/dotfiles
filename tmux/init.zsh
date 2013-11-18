@@ -13,7 +13,7 @@ if [ -f /usr/bin/tmux ]  || [ -f /usr/local/bin/tmux ]; then
         tmux -u
       fi
     else
-      tmux
+      tmux -S /tmp/pair
     fi
   fi
 fi
