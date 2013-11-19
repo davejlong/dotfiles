@@ -34,5 +34,14 @@ set -g history-limit 10000
 # switch to last pane
 bind-key C-a last-pane
 
+# Rather than constraining window size to the maximum size of any client 
+# connected to the *session*, constrain window size to the maximum size of any 
+# client connected to *that window*. Much more reasonable.
+setw -g aggressive-resize on
+
+# Activity monitoring
+setw -g monitor-activity on
+set -g visual-activity on
+
 # Local config
 if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
