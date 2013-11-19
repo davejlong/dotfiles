@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+# If there's a local .server file, then source it
+if [[ -f './.server' ]];
+then
+  . ./.server
+fi
+
+
 if [[ -f './script/rails' || -f './bin/rails' ]];
 then
   rails s
