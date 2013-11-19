@@ -155,12 +155,12 @@ setup_gitconfig
 install_submodules
 install_dotfiles
 
+install_nvm
+install_rvm
+
 if [[ "$(uname -v)" == *Ubuntu* ]]; then
   setup_gnome_colors
 fi
-
-install_nvm
-install_rvm
 
 echo ''
 echo '  All installed!'
