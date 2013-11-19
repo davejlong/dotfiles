@@ -6,14 +6,12 @@ then
   . ./.server
 fi
 
+default_port=7000
+PORT=${1:-$default_port}
 
 if [[ -f './script/rails' || -f './bin/rails' ]];
 then
-  rails s
+  rails s --port $PORT
 else
-  default_port=7000
-
-  PORT=${1:-$default_port}
-
   ruby -run -e httpd . --port $PORT
 fi
