@@ -158,7 +158,7 @@ install_dotfiles
 install_nvm
 install_rvm
 
-if [[ "$(uname -v)" == *Ubuntu* ]]; then
+if command -v gconftool 2> /dev/null; then
   setup_gnome_colors
 fi
 
