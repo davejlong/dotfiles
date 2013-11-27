@@ -7,7 +7,7 @@ set smtp_pass = "`ack-grep "Gmail\s'([^']+)'" --output '$1' $HOME/Private/passwo
 
 set from = "david@recruitics.com"
 set realname = "Dave Long"
-set signature = '~/.mutt/signature'
+set signature = '~/.dotfiles/mutt/signature'
 
 set editor = "vim"
 
@@ -21,9 +21,9 @@ set timeout = 300
 set imap_keepalive = 300
 set postponed = "+[GMail]/Drafts"
 set record = "+[GMail]/Sent Mail"
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/bodies
-set certificate_file=~/.mutt/certificates
+set header_cache=$HOME/.mutt/cache/headers
+set message_cachedir=$HOME/.mutt/cache/bodies
+set certificate_file=$HOME/.mutt/certificates
 set move = no
 set include
 set sort = 'threads'
@@ -47,4 +47,4 @@ macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
-source $HOME/.dotfiles/mutt/colors
+source $ZSH/mutt/colors
