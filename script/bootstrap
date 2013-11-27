@@ -9,7 +9,7 @@ set -e
 echo ''
 
 info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "\r  [ \033[00;34m..\033[0m ] $1"
 }
 
 user () {
@@ -160,6 +160,8 @@ install_rvm
 
 if command -v gconftool 2> /dev/null; then
   setup_gnome_colors
+else
+  info "Couldn't install color theme. Not on Ubuntu Desktop"
 fi
 
 echo ''
