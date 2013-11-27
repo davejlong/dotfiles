@@ -10,7 +10,7 @@ set nocompatible
 let mapleader = ","
 
 set background=dark
-"colorscheme solarized
+" colorscheme solarized
 
 " Line Numbering
 set number
@@ -135,4 +135,5 @@ Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
 Bundle 'chriskempson/base16-vim'
+Bundle 'wakatime/vim-wakatime'
 

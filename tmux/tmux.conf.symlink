@@ -16,6 +16,7 @@ set -g prefix C-a
 
 # start window numbers at 1 to match keyboard order with tmux window order
 set -g base-index 1
+set-window-option -g pane-base-index 1
 
 # renumber windows sequentially after closing any of them
 set -g renumber-windows on
@@ -42,6 +43,9 @@ setw -g aggressive-resize on
 # Activity monitoring
 setw -g monitor-activity on
 set -g visual-activity on
+
+# Enable locking the session
+set-option -g lock-command vlock
 
 # Local config
 if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
