@@ -1,0 +1,19 @@
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rake'
+Bundle 'davejlong/cf-utils.vim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'tpope/vim-rails'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-bundler'
+Bundle 'chriskempson/base16-vim'
+Bundle 'wakatime/vim-wakatime'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-dispatch'
+Bundle 'Shougo/neocomplete.vim'

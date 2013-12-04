@@ -73,43 +73,18 @@ set laststatus=2
 set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
 set statusline+=%=%{fugitive#statusline()}
 
-" Leader Customizations
-  " Strip all trailing whitespace in a file (,W)
-  nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-  " Reselect text that was just pasted (,v)
-  nnoremap <leader>v V`]
-  " Open .vimrc in vsplit (,ev)
-  nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-  " Clear search
-  nnoremap <leader><space> :noh<cr>
-
-  nnoremap HH :silent !afplay ~/.vim/VicotryFanfare.mp3 <CR><C-l>
-
-  " Replace current selected text
-  vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-
-  " vsplit the pane
-  nnoremap <leader>v :vsplit<cr>
-
-" Plugin Setups
-" Something to do with Less
-nnoremap <leader>M :w <BAR> !lessc % > %:t:r.css<CR><space>
-
-" MatchTagAlways
-let g:mta_use_matchparen_group = 0
-let g:mta_filetypes = {
-  \ 'html': 1,
-  \ 'xhtml': 1,
-  \ 'xml': 1,
-  \ 'cfml': 1
-\}
+" Load plugin configs
+function PluginConfigs ()
+  let vimscripts = split(globpath("$ZSH/vim", '*.vim'), '\n')
+  for i in vimscripts
+    exec ":source " . i
+  endfor
+endfunction
+call PluginConfigs()
 
 if file_readable(expand("$HOME/.vimrc.local"))
   source $HOME/.vimrc.local
 endif
-
-" Set .god files to use Ruby syntax
-au BufNewFile,BufRead *.god set filetype=ruby
 
 map <up> <nop>
 map <down> <nop>
@@ -119,21 +94,3 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rake'
-Bundle 'davejlong/cf-utils.vim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'Valloric/MatchTagAlways'
-Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-bundler'
-Bundle 'chriskempson/base16-vim'
-Bundle 'wakatime/vim-wakatime'
-
