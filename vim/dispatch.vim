@@ -1,3 +1,3 @@
-nnoremap r :Dispatch rspec
-nnoremap <leader>r :Dispatch rspec
+nnoremap r :Dispatch rspec<CR>
+nnoremap <leader>r :Dispatch rspec<CR>
 
