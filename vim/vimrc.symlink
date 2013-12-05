@@ -89,6 +89,8 @@ if executable('ag')
 
   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
   nnoremap \ :Ag<SPACE>
+
+  map <Leader>t :Ag TODO<CR>
 endif
 
 "autocmd BufRead,BufNewFile *.md setlocal spell
