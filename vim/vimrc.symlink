@@ -91,6 +91,10 @@ if executable('ag')
   nnoremap \ :Ag<SPACE>
 endif
 
+"autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md,*.markdown,*.mdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 " Load plugin configs
 function! PluginConfigs ()
   let vimscripts = split(globpath("$ZSH/vim", '*.vim'), '\n')

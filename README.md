@@ -4,7 +4,7 @@
 2. `cd ~/.dotfiles`
 3. `./script/bootstrap`
 
-This will install rbenv and ruby-build, install all submodules and symlink all dotfiles into place.
+This will install RVM, NVM and various other tools, as well as install all submodules and symlink all dotfiles into place.
 
 ## Depndencies
 These are the usual things I install with my dotfiles.
@@ -15,7 +15,3 @@ These are the usual things I install with my dotfiles.
     add-apt-repository ppa:tuxpoldo/btsync
     apt-get update
     apt-get install virtualbox-qt curl vim-gtk tmux zsh conky-all sni-qt sni-qt:i386 chromium-browser git
-
-## To do
-
-- Create a Blacklist for server setups that excludes xinit, gvim, etc from symlinks
