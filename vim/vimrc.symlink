@@ -73,6 +73,9 @@ set laststatus=2
 set statusline=%f\ %m\ %r\ Line:%l/%L\ [%p%%]\ %r\ Col:%v\ %r\ Buf:#%n
 set statusline+=%=%{fugitive#statusline()}
 
+" Treat underscore as a word boundary (http://superuser.com/a/244070)
+set iskeyword-=_
+
 " The Silver Searcher
 if executable('ag')
   "Use ag over grep
