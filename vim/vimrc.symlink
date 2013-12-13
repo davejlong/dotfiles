@@ -10,7 +10,7 @@ set nocompatible
 let mapleader = ","
 
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night
 
 " Line Numbering
 set number
@@ -25,7 +25,7 @@ set undofile
 set list 
 
 set listchars=trail:·,eol:¬
-set colorcolumn=80 " Mark 80th column so as to not make lines too long
+set colorcolumn=100 " Mark 100th column so as to not make lines too long
 
 " Searching
 nnoremap / /\v
@@ -89,13 +89,11 @@ if executable('ag')
 
   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
   nnoremap \ :Ag<SPACE>
-
-  map <Leader>t :Ag TODO<CR>
 endif
 
 "autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.md,*.markdown,*.mdown setlocal spell
-autocmd FileType gitcommit setlocal spell
+"autocmd BufRead,BufNewFile *.md,*.markdown,*.mdown setlocal spell
+"autocmd FileType gitcommit setlocal spell
 
 " Load plugin configs
 function! PluginConfigs ()
