@@ -5,12 +5,19 @@ set encoding=utf-8
 
 call pathogen#infect()
 
+
 syntax on
 set nocompatible
 let mapleader = ","
 
 set background=dark
-colorscheme Tomorrow-Night
+
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin'
+  colorscheme Tomorrow-Night-Bright
+elseif os == 'Linux'
+  colorscheme Tomorrow-Night
+endif
 
 " Line Numbering
 set number
