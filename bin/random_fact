@@ -1,0 +1,3 @@
+#!/bin/bash
+
+elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|
