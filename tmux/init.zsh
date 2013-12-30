@@ -1,7 +1,3 @@
-#if [[ -f tmux ]]; then
-  #[ "$TMUX" = "" ] && tmux
-#fi
-
 if [ -f /usr/bin/tmux ]  || [ -f /usr/local/bin/tmux ]; then
   if [ -z $TMUX ]; then
     if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
