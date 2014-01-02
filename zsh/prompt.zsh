@@ -2,32 +2,91 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
-# screenshot:
-#
-# https://raw.github.com/jm3/dotfiles/master/prompt.gif
+if (( $+commands[git] ))
+then
+  git="$commands[git]"
+else
+  git="/usr/bin/git"
+fi
 
-awesome_davejlong_prompt() {
-  arrow="%{$fg[red]%}›"
-  cwd="%{$fg[cyan]%}%B%3c%(#.#.)%b"
-
-  git_info() {
-    is_git_dirty() {
-      git status --porcelain | egrep "\sM|\sD|\?\?" &> /dev/null
-    }
-    branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //' `
-    if [ ! -z "${branch}" ];
-    then
-      is_git_dirty
-      if [ $? -eq 0 ];
-      then
-        git_filth=" %{$fg[yellow]%}✗%{$reset_color%}"
-      fi
-      git_branch=" (%{$fg[red]%}${branch}%{$reset_color%})"
-      echo -n "${git_branch}${git_filth}"
-    fi
-  }
-
-  echo -n "${cwd}$( git_info) ${arrow}%{$reset_color%} "
+git_branch() {
+  echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
 
-export PROMPT='$(awesome_davejlong_prompt)'
+git_dirty() {
+  st=$($git status 2>/dev/null | tail -n 1)
+  if [[ $st == "" ]]
+  then
+    echo ""
+  else
+    if [[ "$st" =~ ^nothing ]]
+    then
+      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+    else
+      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+    fi
+  fi
+}
+
+git_prompt_info () {
+ ref=$($git symbolic-ref HEAD 2>/dev/null) || return
+# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ echo "${ref#refs/heads/}"
+}
+
+unpushed () {
+  $git cherry -v @{upstream} 2>/dev/null
+}
+
+need_push () {
+  if [[ $(unpushed) == "" ]]
+  then
+    echo " "
+  else
+    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+  fi
+}
+
+ruby_version() {
+  if (( $+commands[rbenv] ))
+  then
+    echo "$(rbenv version | awk '{print $1}')"
+  fi
+
+  if (( $+commands[rvm-prompt] ))
+  then
+    echo "$(rvm-prompt | awk '{print $1}')"
+  fi
+}
+
+rb_prompt() {
+  if ! [[ -z "$(ruby_version)" ]]
+  then
+    echo "%{$fg_bold[yellow]%}$(ruby_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
+node_prompt() {
+  if ! [[ -z "$(nvm_version)" ]]
+  then
+    echo "%{$fg_bold[yellow]%}nodejs-$(nvm_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
+directory_name() {
+  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+}
+
+export PROMPT=$'\nin $(directory_name) $(git_dirty)$(need_push)\n› '
+set_prompt () {
+  export RPROMPT="$(rb_prompt) / $(node_prompt)"
+}
+
+precmd() {
+  title "zsh" "%m" "%55<...<%~"
+  set_prompt
+}
