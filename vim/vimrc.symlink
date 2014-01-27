@@ -73,7 +73,7 @@ cnoreabbrev W w
 cmap w!! w !sudo tee % >/dev/null
 
 " Save file on blur
-au FocusLost * :wa
+" au FocusLost * :wa
 
 " Status line customization
 set laststatus=2
