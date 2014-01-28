@@ -145,6 +145,10 @@ install_dotfiles () {
   done
 }
 
+install_vundle () {
+  vim +BundleInstall +qall
+}
+
 setup_gnome_colors () {
   info "setting up color scheme for terminal"
   wget -qO- https://raw.github.com/chriskempson/tomorrow-theme/master/Gnome-Terminal/setup-theme.sh | bash
@@ -154,6 +158,8 @@ setup_gnome_colors () {
 setup_gitconfig
 install_submodules
 install_dotfiles
+
+install_vundle
 
 install_nvm
 install_rvm
