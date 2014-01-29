@@ -16,7 +16,7 @@
 
 if test "$1" == ""
 then
-  exec $EDITOR
+  exec vim -w ~/.vimlog
 else
-  exec $EDITOR "$1"
+  exec vim -w ~/.vimlog "$1"
 fi

@@ -36,6 +36,8 @@ node_modules
 .sass-cache
 .bundle
 .rspec-local
+.foreman
+.env
 
 # Python
 __pycache__
