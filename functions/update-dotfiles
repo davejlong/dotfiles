@@ -1,8 +1,0 @@
-CURRENT_DIR=$PWD
-
-cd $ZSH
-
-git pull
-git submodule foreach git pull origin master
-
-cd $CURRENT_DIR

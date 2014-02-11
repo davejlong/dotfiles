@@ -1,0 +1,8 @@
+# conditionally runs RSpec with Zeus if running
+rspec() {
+  if [ -S .zeus.sock ]; then
+    zeus rspec "$@"
+  else
+    command rspec "$@"
+  fi
+}

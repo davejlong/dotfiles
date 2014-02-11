@@ -1,0 +1,8 @@
+# conditionally runs Rake with Zeus if running
+rake() {
+  if [ -S .zeus.sock ]; then
+    zeus rake "$@"
+  else
+    command rake "$@"
+  fi
+}
