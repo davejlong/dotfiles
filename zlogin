@@ -1,11 +1,22 @@
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 
+# sets the color of the Git branch to red if dirty
+git_prompt_color() {
+  st=$(git status 2>/dev/null | tail -n 1)
+  if [[ $st == '' ]] || [[ $st =~ ^nothing ]];
+  then
+    echo 'green'
+  else
+    echo 'red'
+  fi
+}
+
 # adds the current branch name in green
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+    echo "[%{$fg_bold[$(git_prompt_color)]%}${ref#refs/heads/}%{$reset_color%}]"
   fi
 }
 
