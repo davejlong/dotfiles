@@ -35,7 +35,7 @@ ruby_version() {
 rb_prompt() {
   if ! [[ -z "$(ruby_version)" ]]
   then
-    echo "%{$fg_bold[green]%}$(ruby_version)%{$reset_color%}"
+    echo "%{$fg_bold[blue]%}$(ruby_version)%{$reset_color%}"
   else
     echo ""
   fi
@@ -45,7 +45,7 @@ rb_prompt() {
 node_prompt() {
   if ! [[ -z "$(nvm_version)" ]]
   then
-    echo "%{$fg_bold[green]%}nodejs-$(nvm_version)%{$reset_color%}"
+    echo "%{$fg_bold[blue]%}nodejs-$(nvm_version)%{$reset_color%}"
   else
     echo ""
   fi
