@@ -1,4 +1,5 @@
 export DOTFILES="$HOME/.dotfiles"
+export PROJECTS="$HOME/Projects"
 
 # adds the current branch name in green
 git_prompt_info() {
@@ -51,5 +52,6 @@ setopt promptsubst
 
 # prompt
 export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+export RPROMPT="[$(rb_prompt)][$(node_prompt)]"
 
 export PATH="$DOTFILES/bin:$PATH"

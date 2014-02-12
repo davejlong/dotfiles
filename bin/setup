@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+if [[ -x /usr/local/bin/brew ]]; then
+  brew bundle
+fi
+
+echo "Installing rcrc to $HOME/.rcrc"
+rcup rcrc
+echo "Installing the rest of the dotfiles"
+rcup

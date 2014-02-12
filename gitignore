@@ -1,0 +1,37 @@
+# General stuff
+*.DS_Store
+.svn
+tmp/**/*
+log/*.log
+db/*.sqlite3
+
+# Eclipse / CF Builder
+.settings
+.project
+settings.xml
+
+# Vim
+*.sw[nop]
+*.un~
+
+# Vagrant
+.vagrant
+
+# ColdFusion
+CFIDE
+WEB-INF
+
+# Node / NPM
+npm-debug.log
+node_modules
+
+# Ruby
+.sass-cache
+.bundle
+.rspec-local
+.foreman
+.env
+zeus.json
+
+# Python
+__pycache__

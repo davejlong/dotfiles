@@ -1,3 +1,6 @@
+# ZSH
+alias reload!=". $HOME/.zshrc"
+
 # Unix
 alias tlf="tail -f"
 alias ln='ln -v'
@@ -32,6 +35,9 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+
+# Vagrant
+alias v="vagrant"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

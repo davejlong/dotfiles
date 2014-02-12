@@ -1,0 +1,3 @@
+EXCLUDES="README.md LICENSE Brewfile bin zsh"
+DOTFILES_DIRS="$HOME/.dotfiles"
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ ! -e $DOTFILES/vim/bundle/vundle ]; then
+  git clone https://github.com/gmarik/vundle.git $DOTFILES/vim/bundle/vundle
+fi
+vim -u $DOTFILES/vim/vimrc.bundles +BundleInstall +qa
