@@ -10,7 +10,7 @@ compinit
 
 # load functions
 for function in $DOTFILES/zsh/functions/*; do
-	source $function
+  source $function
 done
 
 # history settings
