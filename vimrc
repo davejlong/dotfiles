@@ -141,6 +141,7 @@ let g:rspec_command = "Dispatch rspec {spec}"
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 " Treat <li> and <p> tags like the block
 " tags they are
