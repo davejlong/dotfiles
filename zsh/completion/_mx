@@ -1,2 +1,6 @@
 #compdef mx
-# TODO list tmux sessions
+_tmux_sessions() {
+  tmux list-sessions | awk 'BEGIN { FS = ":" } ; {print $1}'
+}
+
+_tmux_sessions
