@@ -162,6 +162,11 @@ nnoremap <C-l> <C-w>l
 " check on open as well as save
 let g:syntastic_check_on_open=1
 
+" Configure Neocomplete plugin
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 1
+
 " Set Airline to use Powerline fonts
 let g:airline_powerline_fonts = 1
 
