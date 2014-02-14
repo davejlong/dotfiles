@@ -39,5 +39,8 @@ alias z="zeus"
 # Vagrant
 alias v="vagrant"
 
+[[ $(uname) == 'Linux' && -f ~/.aliases.linux ]] && source ~/.aliases.linux
+[[ $(uname) == 'Darwin' && -f ~/.aliases.mac ]] && source ~/.aliases.mac
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
