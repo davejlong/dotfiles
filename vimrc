@@ -55,12 +55,16 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile Gruntfile set filetype=javascript
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  autocmd BufWrite * mkview
+  autocmd BufRead * silent loadview
 augroup END
 
 " Softtabs, 2 spaces
@@ -69,7 +73,7 @@ set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
-set cinkeys=0{,0},:,0#,!,!^F
+" set cinkeys=0{,0},:,0#,!,!^F
 
 " Treat underscore as a word boundary (http://superuser.com/a/244070)
 set iskeyword-=_
