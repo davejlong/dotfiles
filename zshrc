@@ -1,5 +1,3 @@
-source ~/.zlogin
-
 # load our own completion functions
 fpath=($DOTFILES/zsh/completion $fpath)
 
