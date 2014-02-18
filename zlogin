@@ -74,7 +74,13 @@ export CLICOLOR=1
 setopt promptsubst
 
 # prompt
-export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
-export RPROMPT="[$(rb_prompt)][$(node_prompt)]"
+export PROMPT='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+set_prompt () {
+  export RPROMPT="[$(rb_prompt)][$(node_prompt)]"
+}
+
+precmd () {
+  set_prompt
+}
 
 export PATH="$DOTFILES/bin:$PATH"

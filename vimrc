@@ -22,6 +22,8 @@ set smartcase
 set gdefault
 set showmatch
 
+set colorcolumn=80 " Mark 80th column so as to not make lines too long
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighint the last used search pattern
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -55,6 +57,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile Gruntfile set filetype=javascript
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
@@ -69,7 +72,7 @@ set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
-set cinkeys=0{,0},:,0#,!,!^F
+" set cinkeys=0{,0},:,0#,!,!^F
 
 " Treat underscore as a word boundary (http://superuser.com/a/244070)
 set iskeyword-=_
