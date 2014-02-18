@@ -22,6 +22,8 @@ set smartcase
 set gdefault
 set showmatch
 
+set colorcolumn=80 " Mark 80th column so as to not make lines too long
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighint the last used search pattern
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
