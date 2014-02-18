@@ -1,3 +1,5 @@
+export TERM=screen-256color
+
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 

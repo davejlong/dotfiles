@@ -1,5 +1,3 @@
-set t_Co=256
-
 scriptencoding utf-8
 set encoding=utf-8
 
