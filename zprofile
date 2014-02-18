@@ -86,3 +86,6 @@ precmd () {
 }
 
 export PATH="$DOTFILES/bin:$PATH"
+
+# Local config
+[[ -f $HOME/.zprofile.local ]] && source $HOME/.zprofile.local
