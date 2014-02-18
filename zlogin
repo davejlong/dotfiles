@@ -1,6 +1,18 @@
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 
+# Load RVM is available
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+  source "$HOME/.rvm/scripts/rvm"
+elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
+  source "/usr/local/rvm/scripts/rvm"
+fi
+
+# Load NVM if available
+if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+  source "$HOME/.nvm/nvm.sh"
+fi
+
 # sets the color of the Git branch to red if dirty
 git_prompt_color() {
   st=$(git status 2>/dev/null | tail -n 1)
