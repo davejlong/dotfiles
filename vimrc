@@ -62,9 +62,6 @@ augroup vimrcEx
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-  autocmd BufWrite * mkview
-  autocmd BufRead * silent loadview
 augroup END
 
 " Softtabs, 2 spaces
