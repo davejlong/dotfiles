@@ -72,7 +72,11 @@ set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
-" set cinkeys=0{,0},:,0#,!,!^F
+
+" Configure folds
+set foldmethod=syntax   " Fold based on indent
+set foldnestmax=3       " Deepest fold is 3 levels
+
 
 " Treat underscore as a word boundary (http://superuser.com/a/244070)
 set iskeyword-=_
@@ -96,13 +100,14 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme github
+colorscheme jellybeans
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Numbers
-set number
+" set number
 set numberwidth=5
+set relativenumber
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
@@ -128,7 +133,8 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Index ctags from any project, including
 " those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+set tags="./tags,tags,.git/tags;
+map <Leader>ct :!ctags -R -f .git/tags .<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -161,9 +167,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Clear seach
+nnoremap <leader><space> :noh<cr>
+
 " configure syntastic syntax checking to
 " check on open as well as save
 let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs=1
 
 " Configure Neocomplete plugin
 let g:neocomplete#enable_at_startup = 1

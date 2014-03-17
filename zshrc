@@ -46,8 +46,8 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# aliases
-[[ -f $DOTFILES/aliases ]] && source $DOTFILES/aliases
-
 # Local config
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+# aliases
+[[ -f $DOTFILES/aliases ]] && source $DOTFILES/aliases

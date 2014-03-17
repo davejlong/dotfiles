@@ -35,3 +35,5 @@ zeus.json
 
 # Python
 __pycache__
+
+coverage/**/*
