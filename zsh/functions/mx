@@ -67,7 +67,7 @@ mx() {
       tmux new-window -n shell -t "$SESSION"
       _safe_window console bin/console
       # _safe_window builder bin/builder
-      _safe_window server bin/setup
+      _safe_window server bin/server
 
       tmux select-window -t "$SESSION":1
     fi

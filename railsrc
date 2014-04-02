@@ -1,2 +1,3 @@
 --skip-test-unit
 --database=postgresql
+--template=https://raw.github.com/RailsApps/rails-composer/master/composer.rb
