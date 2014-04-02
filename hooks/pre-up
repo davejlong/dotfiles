@@ -4,3 +4,8 @@
 if [ ! -s "$HOME/.rvm/scripts/rvm" ]; then
   curl -sSL https://get.rvm.io | bash -s stable --ruby
 fi
+
+# Install NVM if it's not already installed
+if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
+  curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+fi
