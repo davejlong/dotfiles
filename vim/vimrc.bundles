@@ -27,6 +27,7 @@ Bundle 'vim-scripts/tComment'
 Bundle 'bling/vim-airline'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'mustache/vim-mustache-handlebars'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

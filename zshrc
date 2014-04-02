@@ -1,3 +1,4 @@
+source "$HOME/.zprofile"
 # load our own completion functions
 fpath=($DOTFILES/zsh/completion $fpath)
 

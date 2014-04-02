@@ -64,6 +64,9 @@ augroup vimrcEx
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Set JSON filetype
+  au BufRead,BufNewFile *.json setf json
 augroup END
 
 " Softtabs, 2 spaces
@@ -182,7 +185,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 1
 
 " Set Airline to use Powerline fonts
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
