@@ -26,3 +26,5 @@
   default = simple
 [commit]
   template = ~/.gitmessage
+[branch]
+  mergeoptions = --no-ff

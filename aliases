@@ -7,8 +7,8 @@ alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias ...='../..'
 alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
+alias ll='ls -alhG'
+alias lh='ls -AlhG'
 alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
@@ -23,7 +23,7 @@ alias gci="git pull --rebase && rake && git push"
 alias b="bundle"
 
 # Tests and Specs
-alias t="ruby -I test"
+# alias t="ruby -I test"
 
 # Rubygems
 alias gi="gem install"
