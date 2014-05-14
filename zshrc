@@ -52,3 +52,7 @@ export EDITOR=$VISUAL
 
 # aliases
 [[ -f $DOTFILES/aliases ]] && source $DOTFILES/aliases
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[ -s "/home/davejlong/.nvm/nvm.sh" ] && . "/home/davejlong/.nvm/nvm.sh" # This loads nvm
