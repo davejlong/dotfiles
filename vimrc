@@ -80,7 +80,7 @@ set smartindent
 set autoindent
 
 " Configure folds
-set foldmethod=syntax   " Fold based on indent
+" set foldmethod=syntax   " Fold based on indent
 set foldnestmax=3       " Deepest fold is 3 levels
 
 
@@ -106,13 +106,13 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme jellybeans
+colorscheme monokai
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Numbers
 " set number
-set numberwidth=5
+set numberwidth=4
 set relativenumber
 
 " Snippets are activated by Shift+Tab
