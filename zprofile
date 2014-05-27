@@ -3,11 +3,17 @@ export TERM=screen-256color
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 
-# Load RVM is available
+# Load RVM if available
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
 elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
   source "/usr/local/rvm/scripts/rvm"
+fi
+
+# Load rbenv if available
+if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
 # Load NVM if available

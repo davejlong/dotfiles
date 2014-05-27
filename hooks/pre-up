@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Install RVM if it's not already installed
-if [ ! -s "$HOME/.rvm/scripts/rvm" ]; then
-  curl -sSL https://get.rvm.io | bash -s stable --ruby
-fi
+# if [ ! -s "$HOME/.rvm/scripts/rvm" ]; then
+#   curl -sSL https://get.rvm.io | bash -s stable --ruby
+# fi
 
 # Install NVM if it's not already installed
 if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
