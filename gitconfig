@@ -5,7 +5,7 @@
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
   rank-contributers = !$DOTFILES/bin/git-rank-contributers
-  count   = !git shortlog -sn
+  count   = shortlog -sn
   ribbon  = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
   lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
