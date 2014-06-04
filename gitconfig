@@ -4,6 +4,7 @@
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
+  cleanup = !$DOTFILES/bin/git-cleanup
   rank-contributers = !$DOTFILES/bin/git-rank-contributers
   count   = shortlog -sn
   ribbon  = tag --force _ribbon origin/master
