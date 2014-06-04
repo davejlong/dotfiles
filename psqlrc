@@ -1,5 +1,8 @@
 -- Official docs: http://www.postgresql.org/docs/9.3/static/app-psql.html
 -- Unofficial docs: http://robots.thoughtbot.com/improving-the-command-line-postgres-experience
+\set HOST 127.0.0.1
+\set PORT 5432
+\set USER docker
 
 -- Don't display the "helpful" message on startup.
 \set QUIET 1
