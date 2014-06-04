@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-`git branch -l`.split(%{\n}).each do |branch|
+`git branch --merged`.split(%{\n}).each do |branch|
   if branch.strip =~ /^(feature|hotfix)\//
     print "\x1B[33m Removing #{branch.strip}... \x1B[39m"
     `git branch -d #{branch.strip}`
