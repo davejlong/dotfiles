@@ -6,6 +6,7 @@ elseif has("gui_macvim") " Mac
   set guifont=Inconsolata:h14
 endif
 
+colorscheme github
 set background=light
 
 " No toolbar

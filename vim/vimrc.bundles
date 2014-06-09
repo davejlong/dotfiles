@@ -30,6 +30,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'sickill/vim-monokai'
 Bundle 'rizzatti/dash.vim'
+Bundle 'endel/vim-github-colorscheme'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
