@@ -30,6 +30,7 @@ Bundle 'sickill/vim-monokai'
 Bundle 'rizzatti/dash.vim'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'arecarn/crunch'
+Bundle 'tpope/vim-rails'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
