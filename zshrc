@@ -55,4 +55,13 @@ export EDITOR=$VISUAL
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# Load Python virtualenvwrapper if available
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+  export WORKON_HOME=$HOME/Projects/.envs
+  if [ -d "$WORKON_HOME" ]; then
+    mkdir -p $WORKON_HOME
+  fi
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 [ -s "/home/davejlong/.nvm/nvm.sh" ] && . "/home/davejlong/.nvm/nvm.sh" # This loads nvm
