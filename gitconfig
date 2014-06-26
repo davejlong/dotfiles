@@ -28,3 +28,5 @@
   template = ~/.gitmessage
 [branch]
   mergeoptions = --no-ff
+[merge]
+	tool = vimdiff
