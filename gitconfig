@@ -1,11 +1,11 @@
 [user]
-  name = David Long
+	name = Dave Long
   email = dave@davejlong.com
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
   cleanup = !$DOTFILES/bin/git-cleanup
-  rank-contributers = !$DOTFILES/bin/git-rank-contributers
+  rank-contributors = !$DOTFILES/bin/git-rank-contributors
   count   = shortlog -sn
   ribbon  = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
@@ -30,3 +30,6 @@
   mergeoptions = --no-ff
 [merge]
 	tool = vimdiff
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
