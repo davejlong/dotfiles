@@ -30,7 +30,7 @@ Bundle 'sickill/vim-monokai'
 Bundle 'rizzatti/dash.vim'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'arecarn/crunch'
-Bundle 'airblade/vim-gitgutter'
+" Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-rails'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
