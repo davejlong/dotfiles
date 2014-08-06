@@ -1,19 +1,16 @@
-if filereadable(expand("~/.vimrc.bundles.local"))
-  source ~/.vimrc.bundles.local
-endif
-
-filetype on
-
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+set nocompatible               " Be iMproved
 
-  set runtimepath+=/Users/davejlong/.vim/bundle/neobundle.vim/
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('/Users/davejlong/.vim/bundle'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
@@ -43,11 +40,19 @@ NeoBundle 'arecarn/crunch'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'davejlong/cf-utils.vim'
 
+" Required:
 call neobundle#end()
 
+" Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
+
+filetype on

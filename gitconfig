@@ -1,5 +1,5 @@
 [user]
-	name = Dave Long
+  name = Dave Long
   email = dave@davejlong.com
 [alias]
   co = checkout
@@ -29,7 +29,7 @@
 [branch]
   mergeoptions = --no-ff
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
