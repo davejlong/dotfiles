@@ -1,6 +1,6 @@
 [user]
-  name = David Long
-  email = dave@davejlong.com
+  name = Dave Long
+  email = david@recruitics.com
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
