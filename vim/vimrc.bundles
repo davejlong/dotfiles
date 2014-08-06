@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-set nocompatible
-
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" Define bundles via Github repos
-Bundle 'croaky/vim-colors-github'
-Bundle 'danro/rename.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-vinegar'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'vim-scripts/tComment'
-Bundle 'bling/vim-airline'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'sickill/vim-monokai'
-Bundle 'rizzatti/dash.vim'
-Bundle 'endel/vim-github-colorscheme'
-Bundle 'arecarn/crunch'
-" Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-rails'
-
-=======
->>>>>>> d6f2a0b71dd9e6c1fadd5b2fe1ae89591b446317
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
@@ -77,7 +39,7 @@ NeoBundle 'sickill/vim-monokai'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'endel/vim-github-colorscheme'
 NeoBundle 'arecarn/crunch'
-NeoBundle 'airblade/vim-gitgutter'
+" NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'davejlong/cf-utils.vim'
 
