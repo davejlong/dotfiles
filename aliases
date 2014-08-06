@@ -39,6 +39,9 @@ alias z="zeus"
 # Vagrant
 alias v="vagrant"
 
+# Pretty print JSON from file
+alias json='python -mjson.tool'
+
 [[ $(uname) == 'Linux' && -f ~/.aliases.linux ]] && source ~/.aliases.linux
 [[ $(uname) == 'Darwin' && -f ~/.aliases.mac ]] && source ~/.aliases.mac
 

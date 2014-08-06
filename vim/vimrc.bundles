@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 set nocompatible
 
 filetype off
@@ -33,8 +34,58 @@ Bundle 'arecarn/crunch'
 " Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-rails'
 
+=======
+>>>>>>> d6f2a0b71dd9e6c1fadd5b2fe1ae89591b446317
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
 
 filetype on
+
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  set runtimepath+=/Users/davejlong/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('/Users/davejlong/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+NeoBundle 'croaky/vim-colors-github'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/ctags.vim'
+NeoBundle 'vim-scripts/tComment'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'sickill/vim-monokai'
+NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'endel/vim-github-colorscheme'
+NeoBundle 'arecarn/crunch'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'davejlong/cf-utils.vim'
+
+call neobundle#end()
+
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
