@@ -1,0 +1,25 @@
+# vi: set ft=muttrc
+
+color status green default
+
+set my_tmpsecret = `gpg2 -o ~/Private/.tmp -d ~/Private/mutt_pass.gpg 2> /dev/null > /dev/null`
+set my_pass = "`ack-grep '<HOSTNAME> ([^\n]+)' --output '$1' ~/Private/.tmp`"
+set my_del = `rm -f ~/Private/.tmp`
+
+set imap_user = "<YOUR USERNAME>"
+set imap_pass = $my_pass
+
+# SMTP
+set from = "<YOUR USERNAME>"
+set realname = "<YOUR NAME>"
+
+# IMAP
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+
+set certificate_file = "~/.mutt/certificates"
+
+# Signature
+# Uncomment the following line if you have a signature file
+# set signature = "~/.mutt/<HOSTNAME>.signature"

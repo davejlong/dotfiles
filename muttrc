@@ -1,50 +1,34 @@
-# Gmail setup for Mutt
+set move = no # Prevents mutt from asking to move read messages to INBOX
+set imap_keepalive = 900
 
-set imap_user = "david@recruitics.com"
-set imap_pass = "`ack-grep "Gmail\s'([^']+)'" --output '$1' $HOME/Private/passwords.txt`"
-set smtp_url = "smtp://david@recruitics.com@smtp.gmail.com:587/"
-set smtp_pass = "`ack-grep "Gmail\s'([^']+)'" --output '$1' $HOME/Private/passwords.txt`"
-
-set from = "david@recruitics.com"
-set realname = "Dave Long"
-set signature = "$HOME/.mutt/signature"
-
-set editor = "vim"
-
-# Basic config, you can leave this as is
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set imap_check_subscribed
-set hostname = gmail.com
-set mail_check = 120
-set timeout = 300
-set imap_keepalive = 300
-set postponed = "+[GMail]/Drafts"
-set record = "+[GMail]/Sent Mail"
-set header_cache=$HOME/.mutt/cache/headers
-set message_cachedir=$HOME/.mutt/cache/bodies
-set certificate_file=$HOME/.mutt/certificates
-set move = no
-set include
-set sort = 'threads'
-set sort_aux = 'reverse-last-date-received'
-set auto_tag = yes
 ignore "Authentication-Results:"
-ignore "DomainKey-Signature:"
+ignore "DomainKey-Signature":
 ignore "DKIM-Signature:"
-hdr_order Date From To Cc
-alternative_order text/plain text/html *
-auto_view text/html
-bind editor <Tab> complete-query
-bind editor ^T complete
-bind editor <space> noop 
 
-# Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+hdr_order Date From To CC # Sorting email by the given criteria (from left to right)
 
-source $HOME/.mutt/colors
+ignore *
+unignore from: date subject to cc
+unignore x-mailing-list: posted-to:
+unignore x-mailer:
+
+# Nice looks
+set markers = no # Removed the "+" sign from the beginning of wrapper lines
+set pager_index_lines = 5
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+
+# Set your editor
+set editor = vim
+
+# .mutt/muttrc
+folder-hook 'cagedata.com' 'source ~/.mutt/cagedata.com'
+folder-hook 'recruitics.com' 'source ~/.mutt/recruitics.com'
+
+# Macros for switching accounts
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/cagedata.com<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/recruitics.com<enter><change-folder>!<enter>'
+
+# Choose which account should be loaded on startup, uncomment only one of these
+source ~/.mutt/cagedata.com
+# source ~/.mutt/recruitics.com

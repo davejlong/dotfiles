@@ -1,0 +1,34 @@
+# vi: set ft=muttrc
+
+color status cyan default
+
+set my_tmpsecret = `gpg2 -o ~/Private/.tmp -d ~/Private/mutt_pass.gpg 2> /dev/null > /dev/null`
+set my_pass = `ack-grep '<HOSTNAME> ([^\n]+)' --output '$1' ~/Private/.tmp`
+set my_del = `rm -f ~/Private/.tmp`
+
+
+set imap_user = "<YOUR USERNAME>"
+set imap_pass = $my_pass
+
+set smtp_authenticators = "login"
+set ssl_use_sslv3 = "yes"
+set timeout = 15
+
+# SMTP
+set smtp_url = "smtp://<YOUR USERNAME>@outlook.office365.com/"
+set smtp_pass = $my_pass
+set from = "<YOUR USERNAME>"
+set realname = "<YOUR NAME>"
+
+# IMAP
+set mbox = "imap://outlook.office365.com/INBOX"
+set postponed = "imap://outlook.office365.com/Drafts"
+set spoolfile = "imap://outlook.office365.com/INBOX"
+set folder = "imap://outlook.office365.com/"
+set record = "imap://outlook.office365.com/Sent Items"
+
+# Signature
+# Uncomment the following line if you have a signature file
+# set signature = "~/.mutt/<HOSTNAME>.signature"
+
+mailboxes
