@@ -21,14 +21,5 @@ set sort_aux = 'last-date-received'
 # Set your editor
 set editor = vim
 
-# .mutt/muttrc
-folder-hook 'cagedata.com' 'source ~/.mutt/cagedata.com'
-folder-hook 'recruitics.com' 'source ~/.mutt/recruitics.com'
-
-# Macros for switching accounts
-macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/cagedata.com<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/recruitics.com<enter><change-folder>!<enter>'
-
-# Choose which account should be loaded on startup, uncomment only one of these
-source ~/.mutt/cagedata.com
-# source ~/.mutt/recruitics.com
+# Load ~/.muttrc.local
+source ~/.muttrc.local
