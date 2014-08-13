@@ -3,7 +3,7 @@
 color status cyan default
 
 set my_tmpsecret = `gpg2 -o ~/Private/.tmp -d ~/Private/mutt_pass.gpg 2> /dev/null > /dev/null`
-set my_pass = `ack-grep '<HOSTNAME> ([^\n]+)' --output '$1' ~/Private/.tmp`
+set my_pass = `ack '<HOSTNAME> ([^\n]+)' --output '$1' ~/Private/.tmp`
 set my_del = `rm -f ~/Private/.tmp`
 
 

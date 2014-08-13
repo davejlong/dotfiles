@@ -1,2 +1,1 @@
-alias ctags="`brew --prefix`/bin/ctags"
-alias subl="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
+alias ctags="$(brew --prefix)/bin/ctags"
