@@ -63,7 +63,7 @@ rb_prompt() {
 
 # Adds the current Node version
 node_prompt() {
-  if ! [[ -z "$(nvm_version)" ]]
+  if [ $(declare -f nvm_version > /dev/null; echo $?) == 0 ]
   then
     echo "%{$fg_bold[blue]%}nodejs-$(nvm_version)%{$reset_color%}"
   else
