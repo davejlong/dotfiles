@@ -38,7 +38,7 @@ NeoBundle 'endel/vim-github-colorscheme'
 NeoBundle 'arecarn/crunch'
 " NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'davejlong/cf-utils.vim'
+NeoBundle 'burnettk/vim-angular'
 
 " Required:
 call neobundle#end()

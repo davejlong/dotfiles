@@ -42,6 +42,9 @@ alias v="vagrant"
 # Pretty print JSON from file
 alias json='python -mjson.tool'
 
+# Replace rm with trash
+alias rm="trash"
+
 [[ $(uname) == 'Linux' && -f ~/.aliases.linux ]] && source ~/.aliases.linux
 [[ $(uname) == 'Darwin' && -f ~/.aliases.mac ]] && source ~/.aliases.mac
 
