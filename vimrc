@@ -58,6 +58,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile Gruntfile set filetype=javascript
+  autocmd BufRead,BufNewFile *.rb set re=1
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
