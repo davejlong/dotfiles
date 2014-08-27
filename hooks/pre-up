@@ -6,7 +6,7 @@ export dotfiles="$HOME/.dotfiles"
 if [ ! -s "$HOME/.rvm/scripts/rvm" ]; then
   curl -sSL https://get.rvm.io | bash -s stable --ruby
   source "$HOME/.rvm/scripts/rvm"
-  gem install pry
+  gem install pry terminal-notifier
 fi
 
 # Install NVM if it's not already installed

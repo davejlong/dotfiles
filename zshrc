@@ -47,9 +47,6 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# Use Vim as the pager
-export PAGER="$VISUAL -f -R -"
-
 # Local config
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 

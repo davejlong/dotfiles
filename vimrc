@@ -193,6 +193,19 @@ let g:neocomplete#sources#syntax#min_keyword_length = 1
 " Set Airline to use Powerline fonts
 let g:airline_powerline_fonts = 0
 
+map <Leader>c :call CompileGcc()<CR>
+func! CompileGcc()
+  exec "w"
+  exec "!gcc % -o %<"
+endfunc
+
+map <Leader>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+  exec "w"
+  exec "!gcc % -o %<"
+  exec "! ./%<"
+endfunc
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
