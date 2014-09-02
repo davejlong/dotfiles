@@ -21,5 +21,12 @@ set sort_aux = 'last-date-received'
 # Set your editor
 set editor = vim
 
+set certificate_file = "$HOME/.mutt/certificate_file"
+set header_cache = "$HOME/.mutt/cache/headers"
+set message_cachedir = "$HOME/.mutt/cache/bodies"
+
+set mailcap_path = "$HOME/.mutt/mailcap"
+auto_view text/html
+
 # Load ~/.muttrc.local
 source ~/.muttrc.local

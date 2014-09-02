@@ -10,6 +10,8 @@
   ribbon  = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
   lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  aa      = add --all --intent-to-add
+  ap      = add --patch
 [color]
   ui = auto
   diff = auto

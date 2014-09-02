@@ -14,7 +14,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'croaky/vim-colors-github'
 NeoBundle 'danro/rename.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
@@ -29,16 +28,13 @@ NeoBundle 'vim-scripts/ctags.vim'
 NeoBundle 'vim-scripts/tComment'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jnwhiteh/vim-golang'
-NeoBundle 'sickill/vim-monokai'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'endel/vim-github-colorscheme'
 NeoBundle 'arecarn/crunch'
-" NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'davejlong/cf-utils.vim'
+NeoBundle 'burnettk/vim-angular'
+NeoBundle 'flazz/vim-colorschemes'
 
 " Required:
 call neobundle#end()
