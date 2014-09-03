@@ -45,11 +45,14 @@ ruby_version() {
   if (( $+commands[rbenv] ))
   then
     echo "$(rbenv version | awk '{print $1}')"
-  fi
-
-  if (( $+commands[rvm-prompt] ))
+  elif (( $+commands[rvm-prompt] ))
   then
     echo "$(rvm-prompt | awk '{print $1}')"
+  elif (( $+commands[ruby] ))
+  then
+    echo "$(ruby -v | awk '{print $1 "-" $2}')"
+  else
+    echo ""
   fi
 }
 rb_prompt() {
@@ -61,13 +64,23 @@ rb_prompt() {
   fi
 }
 
+
 # Adds the current Node version
-node_prompt() {
+node_version() {
   if [ $(declare -f nvm_version > /dev/null; echo $?) == 0 ]
   then
-    echo "%{$fg_bold[blue]%}nodejs-$(nvm_version)%{$reset_color%}"
+    echo "nodejs-$(nvm_version)"
+  elif (( $+commands[node] ))
+  then
+    echo "nodejs-$(node --version)"
   else
     echo ""
+  fi
+}
+node_prompt() {
+  if ! [[ -z "$(node_version)" ]]
+  then
+    echo "%{$fg_bold[blue]%}$(node_version)%{$reset_color%}"
   fi
 }
 
