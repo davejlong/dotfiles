@@ -3,6 +3,11 @@ export TERM=screen-256color
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 
+export RACK_ENV="develop"
+export RAILS_ENV="develop"
+export NODE_ENV="develop"
+export NPM_ENV="develop"
+
 # Load RVM if available
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
