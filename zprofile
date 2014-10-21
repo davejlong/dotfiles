@@ -3,8 +3,9 @@ export TERM=screen-256color
 export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Projects"
 
-export RACK_ENV="develop"
-export RAILS_ENV="develop"
+export RUBY_ENV="development"
+export RACK_ENV="development"
+export RAILS_ENV="development"
 export NODE_ENV="develop"
 export NPM_ENV="develop"
 

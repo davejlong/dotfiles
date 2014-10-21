@@ -35,6 +35,9 @@ NeoBundle 'arecarn/crunch'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'eraserhd/vim-ios'
+NeoBundle 'msanders/cocoa.vim'
+NeoBundle 'toyamarinyon/vim-swift'
 
 " Required:
 call neobundle#end()

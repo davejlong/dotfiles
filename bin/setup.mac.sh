@@ -9,7 +9,7 @@ if ! [[ -x /usr/local/bin/brew ]]; then
 
   brew install rcm
 
-  brew install ack ansible w3m tmux redis postgres hub gitsh zsh wget ssh-copy-id python
+  brew install ack ansible w3m tmux redis postgres hub gitsh zsh wget ssh-copy-id python tree
   brew install qlcolorcode qlstephen qlmarkdown quicklook-json quicklook-csv qlprettypatch
 
   brew install macvim --with-python --with-lua --override-system-vim --with-ruby
