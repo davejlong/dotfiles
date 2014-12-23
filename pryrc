@@ -4,13 +4,13 @@
 an_array = [1, 2, 3, 4, 5, 6]
 a_hash = { hello: "world", free: "of charge" }
 
-Pry.config.editor = 'vim'
+# Pry.config.editor = 'vim'
 Pry::Commands.block_command('enable-pry', 'Enable `binding.pry` feature') do
   ENV['DISABLE_PRY'] = nil
 end
 
 Pry.config.pager = true
-# Pry.config.editor = "emacs"
+Pry.config.editor = "emacs"
 Pry.config.color = true
 Pry.config.prompt = Pry::NAV_PROMPT
 

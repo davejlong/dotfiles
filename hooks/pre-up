@@ -7,7 +7,7 @@ if [ ! -s "$HOME/.rvm/scripts/rvm" ]; then
   curl -sSL https://get.rvm.io | bash -s stable --ruby
   source "$HOME/.rvm/scripts/rvm"
 
-  exec "rvm @global do gem install pry terminal-notifier foreman"
+  exec "rvm @global do gem install pry terminal-notifier foreman pry-doc t"
 fi
 
 # Install NVM if it's not already installed

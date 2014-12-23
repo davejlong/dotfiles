@@ -1,6 +1,9 @@
-export TERM=screen-256color
+# vi: set ft=zsh :
+
+# export TERM=vt100
 
 export DOTFILES="$HOME/.dotfiles"
+export PATH="$DOTFILES/bin:$PATH"
 export PROJECTS="$HOME/Projects"
 
 export RUBY_ENV="development"
@@ -9,22 +12,19 @@ export RAILS_ENV="development"
 export NODE_ENV="develop"
 export NPM_ENV="develop"
 
+# Load NVM if available
+if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+  source "$HOME/.nvm/nvm.sh"
+fi
+
 # Load RVM if available
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
 elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
   source "/usr/local/rvm/scripts/rvm"
-fi
-
-# Load rbenv if available
-if [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
+elif [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
-fi
-
-# Load NVM if available
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  source "$HOME/.nvm/nvm.sh"
 fi
 
 # sets the color of the Git branch to red if dirty
@@ -110,7 +110,6 @@ precmd () {
   set_prompt
 }
 
-export PATH="$DOTFILES/bin:$PATH"
 
 # Local config
 [[ -f $HOME/.zprofile.local ]] && source $HOME/.zprofile.local
