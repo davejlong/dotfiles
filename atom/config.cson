@@ -16,7 +16,6 @@
   'core':
     'disabledPackages': [
       'welcome'
-      'vim-mode'
     ]
     'projectHome': '/Users/davejlong/Projects'
     'themes': [
@@ -37,3 +36,4 @@
     'command': 'bin/rspec'
   'gulp-helper':
     'command': 'gulp'
+  'linter': {}
