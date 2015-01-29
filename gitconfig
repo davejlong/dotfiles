@@ -12,6 +12,7 @@
   lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   aa      = add --all --intent-to-add
   ap      = add --patch
+  stat    = status --short --branch
 [color]
   ui = auto
   diff = auto

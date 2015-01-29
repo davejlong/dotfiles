@@ -12,11 +12,6 @@ export RAILS_ENV="development"
 export NODE_ENV="develop"
 export NPM_ENV="develop"
 
-# Load NVM if available
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  source "$HOME/.nvm/nvm.sh"
-fi
-
 # Load RVM if available
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source "$HOME/.rvm/scripts/rvm"
@@ -76,9 +71,12 @@ node_version() {
   if [ $(declare -f nvm_version > /dev/null; echo $?) == 0 ]
   then
     echo "nodejs-$(nvm_version)"
+  elif (( $+commands[iojs] ))
+  then
+    echo "iojs-$(iojs --version)"
   elif (( $+commands[node] ))
   then
-    echo "nodejs-$(node --version)"
+    echo "node-$(node --version)"
   else
     echo ""
   fi

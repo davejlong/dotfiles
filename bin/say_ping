@@ -1,0 +1,12 @@
+#!/bin/bash
+
+IP=$1
+GO=1
+
+trap "GO=0" INT
+
+while [ $GO -eq 1 ]
+do
+  ping -c 1 $IP | grep '1 packets received' && say "ping"
+  sleep 2
+done

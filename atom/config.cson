@@ -1,39 +1,37 @@
-'global':
-  'exception-reporting':
-    'userId': '78c54aba-b64f-0306-f671-5810eacd78ca'
-  'release-notes':
-    'viewedVersion': '0.95.0'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '3c3a09a87af3b04fe2e8fa1adb77049757209e40'
-  'editor':
-    'fontSize': 14
-    'fontFamily': 'Inconsolata'
-    'showIndentGuide': true
-    'showInvisibles': true
-    'invisibles': {}
-  'core':
-    'disabledPackages': [
-      'welcome'
+"*":
+  "exception-reporting":
+    userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
+  editor:
+    fontFamily: "Inconsolata"
+    fontSize: 14
+    showInvisibles: true
+    showIndentGuide: true
+  core:
+    disabledPackages: [
+      "welcome"
     ]
-    'projectHome': '/Users/davejlong/Projects'
-    'themes': [
-      'atom-dark-ui'
-      'base16-tomorrow-dark-theme'
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
     ]
-    'useReactEditor': true
-  'spell-check':
-    'grammars': [
-      'source.gfm'
-      'text.git-commit'
-      'text.plain'
+    projectHome: "/Users/davejlong/Projects"
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
     ]
-  'test-status':
-    'spec/**/*_spec':
-      'rb': 'bundle exec rspec'
-  'rspec':
-    'command': 'bin/rspec'
-  'gulp-helper':
-    'command': 'gulp'
-  'linter': {}
+  "test-status":
+    "spec/**/*_spec":
+      rb: "bundle exec rspec"
+  rspec:
+    command: "bin/rspec"
+  "gulp-helper":
+    command: "gulp"
+  linter: {}

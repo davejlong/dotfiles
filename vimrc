@@ -62,6 +62,8 @@ augroup vimrcEx
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
+  " Disable spell checking of capitalized words
+  syn match myExCapitalWords +\<[A-Z]\w*\>+ contains=@NoSpell
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
@@ -108,7 +110,10 @@ endif
 
 " Color scheme
 colorscheme Tomorrow-Night-Eighties
+
+" colorscheme Tomorrow
 " set background=light
+
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
