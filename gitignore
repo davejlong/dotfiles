@@ -57,3 +57,4 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+Pods

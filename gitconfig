@@ -1,6 +1,6 @@
 [user]
   name = Dave Long
-  email = david@cagedata.com
+  email = dlong@cagedata.com
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
