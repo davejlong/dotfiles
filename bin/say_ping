@@ -7,6 +7,13 @@ trap "GO=0" INT
 
 while [ $GO -eq 1 ]
 do
-  ping -c 1 $IP | grep '1 packets received' && say "ping"
-  sleep 2
+  ping -c 1 $IP | grep -i '1 packets received'
+  result=$?
+  if [ $result -eq 0 ]
+  then
+    say -v 'Good News' "Ping"
+  else
+    say -v 'Bad News' "No Ping"
+  fi
+  sleep 3
 done
