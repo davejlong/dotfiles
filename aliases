@@ -39,6 +39,9 @@ alias z="zeus"
 # Vagrant
 alias v="vagrant"
 
+# Docker / Docker-Compose
+alias dap="docker-compose run app"
+
 # Pretty print JSON from file
 alias json='python -mjson.tool'
 
