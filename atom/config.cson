@@ -8,17 +8,21 @@
   metrics:
     userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
   editor:
-    fontFamily: "Inconsolata"
-    fontSize: 14
     showInvisibles: true
     showIndentGuide: true
+    invisibles: {}
+    fontFamily: "Inconsolata"
+    fontSize: 20
   core:
     disabledPackages: [
       "welcome"
+      "language-coldfusion"
+      "language-coldfusion"
+      "RubyMotion"
     ]
     themes: [
-      "atom-dark-ui"
-      "base16-tomorrow-dark-theme"
+      "atom-light-ui"
+      "one-light-syntax"
     ]
     projectHome: "/Users/davejlong/Projects"
   "spell-check":
@@ -35,3 +39,7 @@
   "gulp-helper":
     command: "gulp"
   linter: {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  minimap: {}

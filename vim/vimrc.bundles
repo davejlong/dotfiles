@@ -39,6 +39,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'eraserhd/vim-ios'
 NeoBundle 'msanders/cocoa.vim'
 NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'terryma/vim-expand-region'
 
 " Required:
 call neobundle#end()

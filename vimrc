@@ -108,6 +108,10 @@ if executable('ag')
   nnoremap \ :Ag<SPACE>
 endif
 
+" Region expanding http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " Color scheme
 colorscheme Tomorrow-Night-Eighties
 " colorscheme solarized
