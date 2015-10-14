@@ -12,7 +12,9 @@
     showIndentGuide: true
     invisibles: {}
     fontFamily: "Inconsolata"
-    fontSize: 20
+    preferredLineLength: 100
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   core:
     disabledPackages: [
       "welcome"
