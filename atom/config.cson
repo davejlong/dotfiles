@@ -8,13 +8,13 @@
   metrics:
     userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
   editor:
-    showInvisibles: true
     showIndentGuide: true
     invisibles: {}
     fontFamily: "Inconsolata"
-    preferredLineLength: 100
     softWrap: true
     softWrapAtPreferredLineLength: true
+    showInvisibles: true
+    preferredLineLength: 100
   core:
     disabledPackages: [
       "welcome"
@@ -45,3 +45,15 @@
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   minimap: {}
+  wakatime:
+    ignore: [
+      "^/var/"
+      "^/tmp/"
+      "^/private/"
+      "COMMIT_EDITMSG$"
+      "PULLREQ_EDITMSG$"
+      "MERGE_MSG$"
+    ]
+    apikey: "bf50058e-8bb7-4e6e-a7f4-50aa534c0fed"
+  "linter-swiftc": {}
+  "linter-rubocop": {}

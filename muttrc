@@ -28,5 +28,9 @@ set message_cachedir = "$HOME/.mutt/cache/bodies"
 set mailcap_path = "$HOME/.mutt/mailcap"
 auto_view text/html
 
+# macro index \' "<tag-pattern>~R !~D !~F<enter>\
+#   <tag-prefix><save-message>+[Gmail]/All <enter>" \
+#   "Archive"
+
 # Load ~/.muttrc.local
 source ~/.muttrc.local

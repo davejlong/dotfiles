@@ -42,6 +42,7 @@ NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 " Required:
 call neobundle#end()

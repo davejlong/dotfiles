@@ -12,6 +12,7 @@ for function in $DOTFILES/zsh/functions/*; do
 done
 
 # history settings
+HISTFILE="$HOME/.zsh_history"
 setopt histignoredups
 SAVEHIST=4096
 HISTSIZE=4096

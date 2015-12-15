@@ -43,7 +43,9 @@ alias v="vagrant"
 alias dap="docker-compose run app"
 
 # Pretty print JSON from file
-alias json='python -mjson.tool'
+alias json="python -mjson.tool"
+
+alias ping="prettyping"
 
 [[ $(uname) == 'Linux' && -f ~/.aliases.linux ]] && source ~/.aliases.linux
 [[ $(uname) == 'Darwin' && -f ~/.aliases.mac ]] && source ~/.aliases.mac
