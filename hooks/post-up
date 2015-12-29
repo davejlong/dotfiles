@@ -3,4 +3,4 @@
 if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
   curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 fi
-vim -u $DOTFILES/vim/vimrc.bundles +NeoBundleInstall +qall
+vim -u $DOTFILES/vim/bundles.vim +NeoBundleInstall +qall

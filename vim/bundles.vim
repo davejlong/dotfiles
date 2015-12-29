@@ -40,7 +40,6 @@ NeoBundle 'eraserhd/vim-ios'
 NeoBundle 'msanders/cocoa.vim'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'ekalinin/Dockerfile.vim'
 

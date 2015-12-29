@@ -22,6 +22,13 @@ elif [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   eval "$(rbenv init -)"
 fi
 
+# Load NVM if possible
+NVM_DIR="$HOME/.nvm"
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  source "$NVM_DIR/nvm.sh"
+  export NVM_DIR
+fi
+
 # sets the color of the Git branch to red if dirty
 git_prompt_color() {
   st=$(git status 2>/dev/null | tail -n 1)

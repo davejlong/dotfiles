@@ -119,6 +119,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " colorscheme Tomorrow
 " set background=light
+set background=dark
 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
