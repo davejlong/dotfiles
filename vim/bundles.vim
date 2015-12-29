@@ -13,6 +13,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+let g:neobundle#install_process_timeout = 1500
+
 " My Bundles here:
 NeoBundle 'danro/rename.vim'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -28,7 +30,12 @@ NeoBundle 'vim-scripts/ctags.vim'
 NeoBundle 'vim-scripts/tComment'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'valloric/YouCompleteMe'
+NeoBundle 'valloric/YouCompleteMe', {
+  \ 'build': {
+    \ 'mac': './install.py --clang-completer --tern-completer',
+    \ 'unix': './install.py --clang-completer --tern-completer'
+  \ }
+\ }
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'endel/vim-github-colorscheme'

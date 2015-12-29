@@ -19,7 +19,7 @@
   status = auto
   branch = auto
 [core]
-	excludesfile = /Users/davejlong/.gitignore
+	excludesfile = ~/.gitignore
   editor = vim
 [apply]
   whitespace = nowarn

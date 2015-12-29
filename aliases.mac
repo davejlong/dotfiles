@@ -1,1 +1,2 @@
 alias ctags="$(brew --prefix)/bin/ctags"
+alias git="$(brew --prefix)/bin/git"
