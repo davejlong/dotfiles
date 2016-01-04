@@ -4,6 +4,7 @@
 tmp/**/*
 log/*.log
 db/*.sqlite3
+Procfile.local
 
 # Eclipse / CF Builder
 .settings
