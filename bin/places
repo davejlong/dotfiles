@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+places = [
+  "Half Moon",
+  "Archies",
+  "Ra",
+  "Chinese",
+  "Rosas",
+  "Knuckleheads",
+  "Indian",
+  "Wendys",
+  "Taco Bell",
+  "Nardellis",
+  "Chick Fillet",
+  "B Muse"
+]
+
+puts "Go to: #{places[rand(0...places.length)]}"

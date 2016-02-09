@@ -49,6 +49,7 @@ NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'dag/vim-fish'
 
 " Required:
 call neobundle#end()

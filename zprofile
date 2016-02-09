@@ -1,16 +1,22 @@
 # vi: set ft=zsh :
 
 # export TERM=vt100
-
 export DOTFILES="$HOME/.dotfiles"
 export PATH="$DOTFILES/bin:$PATH"
 export PROJECTS="$HOME/Projects"
+
+if [[ -d "$HOME/.bin" ]]; then
+  export PATH="$HOME/.bin:$PATH"
+fi
 
 export RUBY_ENV="development"
 export RACK_ENV="development"
 export RAILS_ENV="development"
 export NODE_ENV="develop"
 export NPM_ENV="develop"
+
+# Local config
+[[ -f $HOME/.zprofile.local ]] && source $HOME/.zprofile.local
 
 # Load RVM if available
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
@@ -115,6 +121,3 @@ precmd () {
   set_prompt
 }
 
-
-# Local config
-[[ -f $HOME/.zprofile.local ]] && source $HOME/.zprofile.local
