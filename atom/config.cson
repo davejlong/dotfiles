@@ -52,14 +52,5 @@
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
-  wakatime:
-    ignore: [
-      "^/var/"
-      "^/tmp/"
-      "^/private/"
-      "COMMIT_EDITMSG$"
-      "PULLREQ_EDITMSG$"
-      "MERGE_MSG$"
-    ]
   welcome:
     showOnStartup: false
