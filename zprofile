@@ -12,8 +12,8 @@ fi
 export RUBY_ENV="development"
 export RACK_ENV="development"
 export RAILS_ENV="development"
-export NODE_ENV="develop"
-export NPM_ENV="develop"
+export NODE_ENV="development"
+export NPM_ENV="development"
 
 # Local config
 [[ -f $HOME/.zprofile.local ]] && source $HOME/.zprofile.local

@@ -1,8 +1,3 @@
 c() {
   cd $PROJECTS/$1;
-  if [ -f .node_version ]; then
-    nvm use $(cat .node_version) > /dev/null
-  else
-    nvm use default > /dev/null
-  fi
 }

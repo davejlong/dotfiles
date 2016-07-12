@@ -161,12 +161,14 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
-let g:rspec_command = "Dispatch rspec {spec}"
-let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "Dispatch docker-compose run app bin/rspec {spec}"
+let g:rspec_runner = "os_x_iterm2"
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
+
+nnoremap <Leader>c :Dispatch docker-compose run app bin/rails console<CR>
 
 " Treat <li> and <p> tags like the block
 " tags they are
@@ -200,7 +202,7 @@ let g:neocomplete#sources#syntax#min_keyword_length = 1
 " Set Airline to use Powerline fonts
 let g:airline_powerline_fonts = 0
 
-map <Leader>c :call CompileGcc()<CR>
+" map <Leader>c :call CompileGcc()<CR>
 func! CompileGcc()
   exec "w"
   exec "!gcc % -o %<"
@@ -259,6 +261,8 @@ onoremap <silent> [l :call NextIndent(0, 0, 0, 1)<CR>
 onoremap <silent> ]l :call NextIndent(0, 1, 0, 1)<CR>
 onoremap <silent> [L :call NextIndent(1, 0, 1, 1)<CR>
 onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
+
+nnoremap <leader>. :OpenAlternate<CR>
 
 function! s:DiffWithSaved()
   let filetype=&ft

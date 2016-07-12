@@ -1,6 +1,7 @@
 [user]
   name = Dave Long
   email = dlong@cagedata.com
+	signingkey = 4FF9ED7C
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
@@ -19,7 +20,7 @@
   status = auto
   branch = auto
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
   editor = nvim
 [apply]
   whitespace = nowarn
@@ -34,8 +35,8 @@
 [merge]
   tool = vimdiff
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

@@ -1,20 +1,8 @@
 "*":
-  "exception-reporting":
-    userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
-  "release-notes":
-    viewedVersion: "0.95.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
-  editor:
-    showIndentGuide: true
-    invisibles: {}
-    fontFamily: "Inconsolata"
-    softWrap: true
-    softWrapAtPreferredLineLength: true
-    showInvisibles: true
-    preferredLineLength: 100
+  "activate-power-mode":
+    autoToggle: false
+    screenShake:
+      enabled: false
   core:
     disabledPackages: [
       "welcome"
@@ -22,11 +10,35 @@
       "language-coldfusion"
       "RubyMotion"
     ]
-    themes: [
-      "atom-light-ui"
-      "one-light-syntax"
-    ]
     projectHome: "/Users/davejlong/Projects"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Hack"
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 100
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
+  "gulp-helper":
+    command: "gulp"
+  linter:
+    errorPanelHeight: 22
+  "linter-rubocop": {}
+  "linter-swiftc": {}
+  metrics:
+    userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
+  minimap: {}
+  "release-notes":
+    viewedVersion: "0.95.0"
+  rspec:
+    command: "docker-compose run app bin/rspec"
   "spell-check":
     grammars: [
       "source.gfm"
@@ -36,15 +48,10 @@
   "test-status":
     "spec/**/*_spec":
       rb: "bundle exec rspec"
-  rspec:
-    command: "bin/rspec"
-  "gulp-helper":
-    command: "gulp"
-  linter: {}
+  "tree-view": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
-  minimap: {}
   wakatime:
     ignore: [
       "^/var/"
@@ -54,6 +61,5 @@
       "PULLREQ_EDITMSG$"
       "MERGE_MSG$"
     ]
-    apikey: "bf50058e-8bb7-4e6e-a7f4-50aa534c0fed"
-  "linter-swiftc": {}
-  "linter-rubocop": {}
+  welcome:
+    showOnStartup: false

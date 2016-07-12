@@ -31,10 +31,10 @@ NeoBundle 'vim-scripts/tComment'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'valloric/YouCompleteMe', {
-  \ 'build': {
-    \ 'mac': './install.py --clang-completer --tern-completer',
-    \ 'unix': './install.py --clang-completer --tern-completer'
-  \ }
+\   'build': {
+\     'mac': './install.py --clang-completer --tern-completer',
+\     'unix': './install.py --clang-completer --tern-completer'
+\   }
 \ }
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'rizzatti/dash.vim'
@@ -49,7 +49,16 @@ NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'dag/vim-fish'
+NeoBundle 'cyphactor/vim-open-alternate'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'Quramy/tsuquyomi'
+NeoBundle 'Shougo/vimproc.vim', {
+\   'build' : {
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   }
+\ }
 
 " Required:
 call neobundle#end()

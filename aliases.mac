@@ -1,2 +1,3 @@
 alias ctags="$(brew --prefix)/bin/ctags"
 alias git="$(brew --prefix)/bin/git"
+alias stree="/Applications/SourceTree.app/Contents/Resources/stree"

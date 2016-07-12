@@ -42,7 +42,7 @@ coverage/**/*
 bower_components
 
 # Xcode
-build/
+/build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3

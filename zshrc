@@ -2,6 +2,11 @@ source "$HOME/.zprofile"
 # load our own completion functions
 fpath=($DOTFILES/zsh/completion $fpath)
 
+# load brew installed completion functions
+if [ -d /usr/local/share/zsh/site-functions ]; then
+  fpath=(/usr/local/share/zsh/site-functions $fpath)
+fi
+
 # completion
 autoload -U compinit
 compinit
@@ -64,3 +69,15 @@ if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+function chpwd() {
+  emulate -L zsh
+  if [ -f .node_version ]; then
+    nvm use $(cat .node_version) > /dev/null
+  else
+    nvm use default > /dev/null
+  fi
+}
+
+export PAGER=less
+export PATH="/usr/local/sbin:$PATH"
