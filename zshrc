@@ -68,7 +68,9 @@ if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if [ -d "$HOME/.rvm/bin" ]; then
+  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+fi
 
 function chpwd() {
   emulate -L zsh

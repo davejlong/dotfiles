@@ -9,6 +9,7 @@
       "language-coldfusion"
       "language-coldfusion"
       "RubyMotion"
+      "build-rake"
     ]
     projectHome: "/Users/davejlong/Projects"
     themes: [
@@ -22,7 +23,6 @@
     preferredLineLength: 100
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
