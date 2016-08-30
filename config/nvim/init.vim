@@ -273,6 +273,9 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
+let g:syntastic_html_tidy_exec="/usr/local/bin/tidy"
+let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

@@ -101,6 +101,17 @@ node_prompt() {
   fi
 }
 
+# Adds the current Elixir version
+ex_version() {
+  echo "$(elixir --version | tail -n 1)"
+}
+ex_prompt() {
+  if ! [[ -z "$(ex_version)" ]];
+  then
+    echo "%{$fg_bold[blue]%}$(ex_version)%{$reset_color%}"
+  fi
+}
+
 # makes color constants available
 autoload -U colors
 colors
@@ -112,9 +123,10 @@ export CLICOLOR=1
 setopt promptsubst
 
 # prompt
-export PROMPT='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+export PROMPT='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[blue]%}%n@%m:"}%{$fg_bold[green]%}%~%{$reset_color%}]
+§ '
 set_prompt () {
-  export RPROMPT="[$(rb_prompt)][$(node_prompt)]"
+  export RPROMPT="[$(ex_prompt)][$(rb_prompt)][$(node_prompt)]"
 }
 
 precmd () {
