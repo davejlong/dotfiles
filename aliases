@@ -42,13 +42,14 @@ alias ion="ionic"
 alias dbuild="docker-compose build"
 alias dapp="docker-compose run --rm app"
 
-# Vagrant
+# Hashicorp
 alias v="vagrant"
+alias tf="terraform"
 
 # Pretty print JSON from file
 alias json="python -mjson.tool"
 
-alias ping="prettyping"
+# alias ping="prettyping"
 
 [[ -x /usr/local/bin/nvim ]] && alias vim="/usr/local/bin/nvim"
 

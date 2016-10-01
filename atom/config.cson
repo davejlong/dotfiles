@@ -12,10 +12,6 @@
       "build-rake"
     ]
     projectHome: "/Users/davejlong/Projects"
-    themes: [
-      "atom-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
   editor:
     fontFamily: "Hack"
     fontSize: 12
@@ -26,6 +22,8 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
+  "git-diff":
+    showIconsInEditorGutter: true
   "gulp-helper":
     command: "gulp"
   linter:
@@ -48,7 +46,8 @@
   "test-status":
     "spec/**/*_spec":
       rb: "bundle exec rspec"
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true

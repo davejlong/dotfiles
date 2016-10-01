@@ -59,6 +59,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \   }
 \ }
+NeoBundle 'hashivim/vim-terraform'
 
 " Required:
 call neobundle#end()
