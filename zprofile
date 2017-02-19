@@ -132,10 +132,9 @@ setopt promptsubst
 export PROMPT='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[blue]%}%n@%m:"}%{$fg_bold[cyan]%}%~%{$reset_color%}]
 § '
 set_prompt () {
-  export RPROMPT="[$(ex_prompt)][$(rb_prompt)][$(node_prompt)]"
+  # export RPROMPT="[$(ex_prompt)][$(rb_prompt)][$(node_prompt)]"
 }
 
 precmd () {
   set_prompt
 }
-

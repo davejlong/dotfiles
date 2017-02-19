@@ -38,9 +38,11 @@ alias s="docker-compose run app bin/rspec"
 # Ionic
 alias ion="ionic"
 
-# Docker Compose
+# Dockery stuff
+alias fig="docker-compose"
 alias dbuild="docker-compose build"
 alias dapp="docker-compose run --rm app"
+alias kube="kubectl"
 
 # Hashicorp
 alias v="vagrant"

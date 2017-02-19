@@ -1,6 +1,6 @@
 [user]
-  name = Dave Long
-  email = dlong@cagedata.com
+	name = Dave Long
+	email = dlong@cagedata.com
 	signingkey = 4FF9ED7C
 [alias]
   co = checkout
@@ -20,7 +20,7 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/david/.gitignore
   editor = nvim
 [apply]
   whitespace = nowarn
@@ -29,11 +29,11 @@
 [push]
   default = simple
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [branch]
   mergeoptions = --no-ff
 [merge]
-  tool = vimdiff
+  tool = atom
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f

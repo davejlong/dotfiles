@@ -72,14 +72,10 @@ if [ -d "$HOME/.rvm/bin" ]; then
   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
 
-function chpwd() {
-  emulate -L zsh
-  if [ -f .node_version ]; then
-    nvm use $(cat .node_version) > /dev/null
-  else
-    nvm use default > /dev/null
-  fi
-}
+source "$DOTFILES/zsh/antigen.zsh"
+
+antigen-bundle Tarrasch/zsh-autoenv # Auto loads any file named ".authenv.zsh"
+antigen apply
 
 export PAGER=less
 export PATH="/usr/local/sbin:$PATH"
