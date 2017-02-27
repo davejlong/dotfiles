@@ -43,7 +43,9 @@ alias tf="terraform"
 # Pretty print JSON from file
 alias json="python -mjson.tool"
 
-# alias ping="prettyping"
+# Postgres
+alias pg_start="pg_ctl start --pgdata  /usr/local/var/postgres/"
+alias pg_stop="pg_ctl stop --pgdata  /usr/local/var/postgres/"
 
 test [[ -x /usr/local/bin/nvim ]]; and alias vim="/usr/local/bin/nvim"
 

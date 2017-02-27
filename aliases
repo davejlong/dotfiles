@@ -53,6 +53,10 @@ alias json="python -mjson.tool"
 
 # alias ping="prettyping"
 
+# Postgres
+alias pg_start="pg_ctl start --pgdata  /usr/local/var/postgres/"
+alias pg_stop="pg_ctl stop --pgdata  /usr/local/var/postgres/"
+
 [[ -x /usr/local/bin/nvim ]] && alias vim="/usr/local/bin/nvim"
 
 [[ $(uname) == 'Linux' && -f ~/.aliases.linux ]] && source ~/.aliases.linux
