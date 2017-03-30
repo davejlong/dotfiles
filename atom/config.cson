@@ -27,7 +27,6 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
-    softWrapAtPreferredLineLength: true
     tabType: "soft"
   "exception-reporting":
     userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
@@ -38,11 +37,12 @@
       _analyticsUserId: "656c0616-03a2-4762-b04c-d0b25aa89b0b"
   "gulp-helper":
     command: "gulp"
-  linter:
-    errorPanelHeight: 22
+  linter: {}
   "linter-rubocop": {}
   "linter-swiftc": {}
   "linter-tidy": {}
+  "linter-ui-default":
+    showPanel: true
   metrics:
     userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
   minimap: {}

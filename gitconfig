@@ -30,6 +30,7 @@
   default = simple
 [commit]
 	template = ~/.gitmessage
+	gpgsign = true
 [branch]
   mergeoptions = --no-ff
 [merge]
