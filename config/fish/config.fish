@@ -18,8 +18,6 @@ test -s "/usr/local/share/chruby/auto.fish"; and source /usr/local/share/chruby/
 
 test -s "$HOME/.ruby-version"; and chruby (cat $HOME/.ruby-version)
 
-test -s "$HOME/.kiex/scripts/kiex"; and source "$HOME/.kiex/scripts/kiex.fish"
-
 set -x NVM_DIR (brew --prefix nvm)
 bass source "$NVM_DIR/nvm.sh"
 

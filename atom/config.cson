@@ -7,9 +7,13 @@
     general:
       _analyticsUserId: "7cc51e61-8006-464c-bbd3-a83abd1bd452"
   "atom-elixir":
-    command: "/Users/david/.kiex/elixirs/elixir-1.3.4/bin/elixir"
+    command: "/Users/david/.kiex/elixirs/elixir-1.4/bin/elixir"
   "atom-material-ui":
-    colors: {}
+    colors:
+      abaseColor: "#607d8b"
+      predefinedColor: "Blue Grey"
+    tabs:
+      tintedTabBar: true
   core:
     disabledPackages: [
       "welcome"
@@ -17,16 +21,22 @@
       "language-coldfusion"
       "RubyMotion"
       "build-rake"
+      "linter-tslint"
     ]
     projectHome: "/Users/davejlong/Projects"
     telemetryConsent: "limited"
-    useCustomTitleBar: true
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax-dark"
+    ]
+    titleBar: "custom"
   editor:
     fontFamily: "Hack"
     fontSize: 12
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
     tabType: "soft"
   "exception-reporting":
     userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
@@ -37,12 +47,13 @@
       _analyticsUserId: "656c0616-03a2-4762-b04c-d0b25aa89b0b"
   "gulp-helper":
     command: "gulp"
+  iex: {}
   linter: {}
   "linter-rubocop": {}
   "linter-swiftc": {}
   "linter-tidy": {}
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 81
   metrics:
     userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
   minimap: {}

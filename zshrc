@@ -79,3 +79,4 @@ antigen apply
 
 export PAGER=less
 export PATH="/usr/local/sbin:$PATH"
+eval $(/usr/libexec/path_helper -s)

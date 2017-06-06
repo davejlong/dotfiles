@@ -1,7 +1,7 @@
 [user]
-	name = Dave Long
-	email = dlong@cagedata.com
-	signingkey = 4FF9ED7C
+  name = Dave Long
+  email = dlong@cagedata.com
+  signingkey = 4FF9ED7C
 [alias]
   co = checkout
   wtf     = !$DOTFILES/bin/git-wtf
@@ -14,13 +14,14 @@
   aa      = add --all --intent-to-add
   ap      = add --patch
   stat    = status --short --branch
+  today   = log --since 00:00:00 --all --no-merges --oneline --author=dlong@cagedata.com
 [color]
   ui = auto
   diff = auto
   status = auto
   branch = auto
 [core]
-	excludesfile = /Users/david/.gitignore
+  excludesfile = /Users/david/.gitignore
   editor = nvim
 [apply]
   whitespace = nowarn
@@ -29,8 +30,8 @@
 [push]
   default = simple
 [commit]
-	template = ~/.gitmessage
-	gpgsign = true
+  template = ~/.gitmessage
+  # gpgsign = true
 [branch]
   mergeoptions = --no-ff
 [merge]
@@ -39,8 +40,10 @@
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[gpg]
+  program = gpg2
