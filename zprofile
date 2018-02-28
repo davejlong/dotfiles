@@ -9,6 +9,10 @@ if [[ -d "$HOME/.bin" ]]; then
   export PATH="$HOME/.bin:$PATH"
 fi
 
+if [[ -d "$HOME/Library/Python/2.7/lib/python/site-packages/powerline" ]]; then
+  export POWERLINE="$HOME/Library/Python/2.7/lib/python/site-packages/powerline"
+fi
+
 export RUBY_ENV="development"
 export RACK_ENV="development"
 export RAILS_ENV="development"

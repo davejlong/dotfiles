@@ -63,3 +63,4 @@ Pods
 # Elixir/Erlang
 erl_crash.dump
 _build
+SCRATCH.md

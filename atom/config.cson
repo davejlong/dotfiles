@@ -14,7 +14,23 @@
       predefinedColor: "Blue Grey"
     tabs:
       tintedTabBar: true
+  "autocomplete-elixir":
+    elixirPath: "/Users/david/.asdf/shims/elixir"
+    erlangHome: "/Users/david/.asdf/shims/"
+    matchDoEnd: false
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "welcome"
       "language-coldfusion"
@@ -22,17 +38,39 @@
       "RubyMotion"
       "build-rake"
       "linter-tslint"
+      "linter-spell"
+      "linter-spell-html"
+      "linter-spell-ruby"
+      "linter-spell-shellscript"
+      "atomify"
+      "busy-signal"
+      "platformio-ide"
+      "platformio-ide-debugger"
+      "platformio-ide-terminal"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".pioenvs"
+      ".piolibdeps"
+      ".clang_complete"
+      ".gcc-flags.json"
     ]
     projectHome: "/Users/davejlong/Projects"
     telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
-      "atom-material-syntax-dark"
+      "one-light-ui"
+      "one-light-syntax"
     ]
     titleBar: "custom"
   editor:
     fontFamily: "Hack"
-    fontSize: 12
+    fontSize: 20
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -40,6 +78,8 @@
     tabType: "soft"
   "exception-reporting":
     userId: "78c54aba-b64f-0306-f671-5810eacd78ca"
+  "file-icons":
+    coloured: false
   "git-diff":
     showIconsInEditorGutter: true
   "git-plus":
@@ -53,12 +93,26 @@
   "linter-swiftc": {}
   "linter-tidy": {}
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 63
+    useBusySignal: false
   metrics:
     userId: "3c3a09a87af3b04fe2e8fa1adb77049757209e40"
-  minimap: {}
+  minimap:
+    plugins:
+      "minimap-autohider": true
+      "minimap-autohiderDecorationsZIndex": 0
+  nuclide:
+    "nuclide-file-tree":
+      showOpenFiles: false
+      showUncommittedChanges: false
+    "nuclide-flow":
+      warnOnNotInstalled: false
+    "nuclide-home":
+      showHome: false
   "one-dark-ui":
     fontSize: 12
+  "platformio-ide":
+    showPIOHome: false
   "release-notes":
     viewedVersion: "0.95.0"
   rspec:
@@ -78,6 +132,9 @@
   "test-status":
     "spec/**/*_spec":
       rb: "bundle exec rspec"
+  "tool-bar":
+    position: "Left"
+    visible: false
   "tree-view":
     hideIgnoredNames: true
   "vim-mode":

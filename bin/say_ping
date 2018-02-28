@@ -12,7 +12,7 @@ do
   if [ $result -eq 0 ]
   then
     say "Ping"
-  else
-    say "No Ping"
+  # else
+    # say "No Ping"
   fi
 done

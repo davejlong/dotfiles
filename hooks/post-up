@@ -1,6 +1,7 @@
-#!/usr/local/bin/fish
+#!/usr/local/bin/zsh
 
-if test ! -e $HOME/.vim/bundle/neobundle.vim
+if test ! -e $HOME/.vim/bundle/neobundle.vim; then
   curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-end
+fi
+
 vim -u $DOTFILES/vim/bundles.vim +NeoBundleInstall +qall

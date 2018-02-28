@@ -1,3 +1,3 @@
-#!/usr/local/bin/fish
+#!/usr/local/bin/zsh
 
-set -g DOTFILES "$HOME/.dotfiles"
+export DOTFILES="$HOME/.dotfiles"

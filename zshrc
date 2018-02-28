@@ -50,7 +50,7 @@ bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # Use vim as the visual editor
-export VISUAL=nvim
+export VISUAL=code
 export EDITOR=$VISUAL
 
 # Local config
@@ -80,3 +80,12 @@ antigen apply
 export PAGER=less
 export PATH="/usr/local/sbin:$PATH"
 eval $(/usr/libexec/path_helper -s)
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
