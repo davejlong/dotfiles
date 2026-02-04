@@ -1,0 +1,7 @@
+[core]
+  sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[user]
+  name = Dave Long
+  email = dlong@cagedata.com
+[http]
+  sslBackend = schannel

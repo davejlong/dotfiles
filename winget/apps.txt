@@ -1,0 +1,31 @@
+# Media
+VideoLAN.VLC
+
+# Productivity
+Greenshot.Greenshot
+Microsoft.Office
+
+# Communication
+Discord.Discord
+SlackTechnologies.Slack
+
+# Tools
+7zip.7zip
+AutoHotkey.AutoHotkey
+Bitwarden.Bitwarden
+Bitwarden.CLI
+BornToBeRoot.NETworkManager
+CPUID.CPU-Z
+gerardog.gsudo
+Git.Git
+Microsoft.PowerToys
+Microsoft.VisualStudioCode
+Neovim.Neovim
+Ookla.Speedtest.CLI
+Ookla.Speedtest.Desktop
+Splashtop.SplashtopBusiness
+Starship.Starship
+
+# 3D Printing
+OpenSCAD.OpenSCAD
+SoftFever.OrcaSlicer

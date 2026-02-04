@@ -1,0 +1,7 @@
+Az
+HuduAPI
+Microsoft.Graph
+Microsoft.WinGet.Client
+PnP.PowerShell
+PSScriptAnalyzer
+SyncroRMM
