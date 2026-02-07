@@ -1,0 +1,4 @@
+# Windows Sandbox
+Containers-DisposableClientVM
+
+Microsoft-Windows-Subsystem-Linux

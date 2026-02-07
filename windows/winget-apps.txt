@@ -25,7 +25,9 @@ Ookla.Speedtest.CLI
 Ookla.Speedtest.Desktop
 Splashtop.SplashtopBusiness
 Starship.Starship
+WireGuard.WireGuard
 
-# 3D Printing
+# Creative
+Inkscape.Inkscape
 OpenSCAD.OpenSCAD
 SoftFever.OrcaSlicer
