@@ -36,12 +36,12 @@ function New-Hardlink($LinkPath, $TargetPath) {
 	Exec { cmd /c mklink /H "$($Link.Path)" "$($Target.Path)" }
 }
 
-function New-StartupShortcut($TagetPath) {
+function New-StartupShortcut($TargetPath) {
 	$Startup = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Startup"
 
 	$WshShell = New-Object -ComObject WScript.Shell
 
 	$Shortcut = $WshShell.CreateShortcut("$Startup\$($TargetPath.Name).lnk")
-	$Shortcut.TargetPath = $TargetPath.FullName
+	$Shortcut.TargetPath = "$($TargetPath)"
 	$Shortcut.Save()
 }
