@@ -17,7 +17,9 @@ Bitwarden.CLI
 BornToBeRoot.NETworkManager
 CPUID.CPU-Z
 gerardog.gsudo
+GermanCoding.SyncTrayzor
 Git.Git
+ImageMagick.ImageMagick
 Microsoft.PowerToys
 Microsoft.VisualStudioCode
 Neovim.Neovim
@@ -25,6 +27,7 @@ Ookla.Speedtest.CLI
 Ookla.Speedtest.Desktop
 Splashtop.SplashtopBusiness
 Starship.Starship
+Syncthing.Syncthing
 WireGuard.WireGuard
 WireSharkFoundation.WireShark
 
