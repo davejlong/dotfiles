@@ -16,10 +16,13 @@ Bitwarden.Bitwarden
 Bitwarden.CLI
 BornToBeRoot.NETworkManager
 CPUID.CPU-Z
+Docker.DockerDesktop
 gerardog.gsudo
 GermanCoding.SyncTrayzor
 Git.Git
 ImageMagick.ImageMagick
+Insecure.Nmap
+Mobatek.Mobaxterm
 Microsoft.PowerToys
 Microsoft.VisualStudioCode
 Neovim.Neovim
