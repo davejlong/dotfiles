@@ -17,25 +17,26 @@ vim.o.incsearch = true
 vim.cmd('syntax enable')
 vim.cmd('filetype plugin indent on')
 
--- vim.g.mapleader = ' '
+vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 
 vim.call('plug#begin')
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-
+Plug('elixir-editors/vim-elixir')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('hrsh7th/cmp-cmdline')
+Plug('hrsh7th/nvim-cmp')
 Plug('joshdick/onedark.vim')
-Plug('vim-airline/vim-airline')
-Plug('vim-airline/vim-airline-themes')
 Plug('mason-org/mason.nvim')
-Plug('TheLeoP/powershell.nvim')
 Plug('mfussenegger/nvim-dap')
+Plug('neovim/nvim-lspconfig')
+Plug('nickjvandyke/opencode.nvim')
 Plug('nvim-tree/nvim-tree.lua')
 Plug('nvim-tree/nvim-web-devicons')
+Plug('TheLeoP/powershell.nvim')
+Plug('vim-airline/vim-airline')
+Plug('vim-airline/vim-airline-themes')
 vim.call('plug#end')
 
 vim.cmd('silent! colorscheme onedark')
@@ -91,7 +92,6 @@ local lsp_attach = function(client, buf)
 	vim.api.nvim_buf_set_option(buf, "tagfunc", "v:lua.vim.lsp.tagfunc")
 end
 
-
 --
 -- PowerShell Config
 --
@@ -129,3 +129,20 @@ require("nvim-tree").setup()
 vim.keymap.set('n', '<leader>F', function(opts)
   require("nvim-tree.api").tree.toggle()
 end)
+
+--
+-- opencode config
+--
+---@type opencode.Opts
+vim.g.opencode_opts = {}
+
+vim.o.autoread = true
+vim.keymap.set({ "n", "x" }, "<leader>oa", function() require("opencode").ask("@this: ") end, { desc = "Ask OpenCode…" })
+vim.keymap.set({ "n", "x" }, "<leader>os", function() require("opencode").select() end,       { desc = "Select OpenCode…" })
+
+vim.keymap.set({ "n", "x" }, "go",  function() return require("opencode").operator("@this ") end,        { desc = "Append range to OpenCode", expr = true })
+vim.keymap.set("n",          "goo", function() return require("opencode").operator("@this ") .. "_" end, { desc = "Append line to OpenCode", expr = true })
+
+vim.keymap.set("n", "<S-C-u>", function() require("opencode").command("session.half.page.up") end,   { desc = "Scroll OpenCode up" })
+vim.keymap.set("n", "<S-C-d>", function() require("opencode").command("session.half.page.down") end, { desc = "Scroll OpenCode down" })
+
